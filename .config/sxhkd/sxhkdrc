@@ -30,13 +30,6 @@ super + Escape
 @Print
     flameshot gui
 
-# brightness controls
-XF86MonBrightness{Up,Down}
-    xbacklight {-inc,-dec} 5%
-
-XF86AudioPlay
-    media-monitor play-pause &
-
 # volume controls
 XF86AudioLowerVolume
     change-volume -5

@@ -26,12 +26,12 @@ color="${styles[$(( $RANDOM % 8 ))]}"
 sed -i -e "s/@import .*/@import \"$color\"/g" $dir/styles/colors.rasi
 
 # comment these lines to disable random style
-themes=($(ls -p --hide="powermenu.sh" --hide="styles" --hide="confirm.rasi" --hide="message.rasi" $dir))
-theme="${themes[$(( $RANDOM % 24 ))]}"
+#themes=($(ls -p --hide="powermenu.sh" --hide="styles" --hide="confirm.rasi" --hide="message.rasi" $dir))
+#theme="${themes[$(( $RANDOM % 24 ))]}"
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
-rofi_command="rofi -theme $dir/$theme"
+rofi_command="rofi -theme $dir/row_square"
 
 # Options
 shutdown=""

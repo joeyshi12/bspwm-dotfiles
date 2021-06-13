@@ -20,7 +20,8 @@ configuration {
 }
 
 /* -- Breeze Light-- */
-/* {
+/*
+* {
     background:                     #EFF0F1FF;
     background-alt:              	#00000000;
     background-bar:                 #93CEE999;
@@ -30,7 +31,6 @@ configuration {
 */
 
 /* -- Breeze Dark-- */
-
 * {
     background:                     #31363bff;
     background-alt:              	#00000000;
@@ -38,7 +38,6 @@ configuration {
     foreground:                     #f5f5f5e6;
     accent:			            	#1d99f3ff;
 }
-
 
 /* -- Black-- */
 /*
@@ -66,7 +65,7 @@ window {
 
 prompt {
     enabled: 						true;
-	padding: 						0.30% 0.75% 0% -0.5%;
+	padding: 						0.30% 0.75% 0% 0%;
 	background-color: 				@background-alt;
 	text-color: 					@foreground;
 	font:							"FantasqueSansMono Nerd Font 10";
