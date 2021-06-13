@@ -32,10 +32,10 @@ super + Escape
 
 # volume controls
 XF86AudioLowerVolume
-    change-volume -5
+    pulsemixer --change-volume -5
 
 XF86AudioRaiseVolume
-    change-volume 5
+    pulsemixer --change-volume +5
 
 XF86AudioMute
     pulsemixer --toggle-mute
