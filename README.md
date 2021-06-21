@@ -1,4 +1,4 @@
-# dotfiles
+# pop-desktop-rice
 
 Configuration files for my desktop running Pop!_OS
 ![2021-06-20_23-54](https://user-images.githubusercontent.com/46363213/122719355-ebb28b80-d222-11eb-9bbb-3a6afcfb5c4d.png)
