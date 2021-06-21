@@ -18,9 +18,8 @@
 theme="full_circle"
 dir="$HOME/.config/rofi/powermenu"
 
-# random colors
 styles=($(ls -p --hide="colors.rasi" $dir/styles))
-color="${styles[$(( $RANDOM % 8 ))]}"
+color="bluish.rasi"
 
 # comment this line to disable random colors
 sed -i -e "s/@import .*/@import \"$color\"/g" $dir/styles/colors.rasi
@@ -38,7 +37,7 @@ shutdown=""
 reboot=""
 lock=""
 suspend=""
-logout=""
+logout=""
 
 # Confirmation
 confirm_exit() {

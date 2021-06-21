@@ -15,7 +15,7 @@ shutdown=" Shutdown"
 reboot=" Restart"
 lock=" Lock"
 suspend=" Sleep"
-logout=" Logout"
+logout=" Logout"
 
 # Confirmation
 confirm_exit() {

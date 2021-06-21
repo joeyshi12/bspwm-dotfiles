@@ -99,7 +99,7 @@ element {
     text-color:                     @fg;
     orientation:                    horizontal;
     border-radius:                  0px;
-	padding: 						8px 8px 8px -20px;
+	padding: 						8px 8px 8px -8px;
 }
 
 element-icon {

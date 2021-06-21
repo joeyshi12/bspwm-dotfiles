@@ -52,7 +52,7 @@ inputbar {
     background-color:               @background-alt;
     text-color:                     @foreground;
     expand:                         false;
-    border:                  		0% 0% 0% 0.5%;
+    border:                  		0% 0% 0% 0.2%;
     border-radius:                  0% 0% 0% 0%;
     border-color:                  	@border;
     margin:                         0% 59.3% 0% 0%;
@@ -81,6 +81,7 @@ element {
     text-color:                     @foreground;
     orientation:                    horizontal;
     border-radius:                  0%;
+    padding:                        1.7% 1.1% 1.7% 1.1%;
 }
 
 element-text {
@@ -107,7 +108,7 @@ element alternate.active {
 element selected {
     background-color:               @selected;
     text-color:                     @foreground;
-    border:                  		0% 0% 0% 0.5%;
+    border:                  		0% 0% 0% 0.2%;
     border-radius:                  0%;
     border-color:                  	@border;
 }

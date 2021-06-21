@@ -8,7 +8,7 @@
  */
 
 configuration {
-	font:							"Noto Sans 10";
+	font:							"SauceCodePro NF 12";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
@@ -65,10 +65,10 @@ window {
 
 prompt {
     enabled: 						true;
-	padding: 						0.30% 0.75% 0% 0%;
+	padding: 						-0.1% 0.75% 0% 0%;
 	background-color: 				@background-alt;
 	text-color: 					@foreground;
-	font:							"FantasqueSansMono Nerd Font 10";
+	font:							"SauceCodePro Nerd Font 12";
 }
 
 entry {
@@ -96,7 +96,7 @@ inputbar {
 
 listview {
     background-color:               @background-alt;
-    columns:                        6;
+    columns:                        3;
     lines:                          3;
     spacing:                        0%;
     cycle:                          false;
