@@ -1,4 +1,4 @@
-# pop-desktop-rice
+# dotfiles
 
 bspwm configuration files for running Linux
 
