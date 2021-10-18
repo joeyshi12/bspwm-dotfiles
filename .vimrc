@@ -7,9 +7,9 @@ Plug 'lervag/vimtex'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
-Plug 'tomasiser/vim-code-dark'
 Plug 'joshdick/onedark.vim'
 Plug 'bignimbus/pop-punk.vim'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " General
@@ -29,22 +29,23 @@ set shiftwidth=4
 set expandtab
 set splitbelow splitright
 set ph=15
-colorscheme pop-punk
+"colorscheme pop-punk
+"hi Normal guibg=NONE ctermbg=NONE
+"highlight LineNr ctermfg=NONE ctermbg=NONE
+"highlight! link SignColumn LineNr
+"highlight EndOfBuffer ctermfg=NONE ctermbg=NONE
 set signcolumn=yes
-hi Normal guibg=NONE ctermbg=NONE
-highlight LineNr ctermfg=NONE ctermbg=NONE
-highlight! link SignColumn LineNr
-highlight EndOfBuffer ctermfg=NONE ctermbg=NONE
+colorscheme nord
+let g:airline_theme='base16'
 
 " Syntastic
 let g:syntastic_python_flake8_args = "--max-line-length=150"
+let g:syntastic_python_checkers=['flake8']
 
 " LaTeX (vimtex/snipmate)
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_view_general_viewer = 'zathura'
-let g:vimtex_compiler_latexmk = {
-            \ 'build_dir': 'build',
-            \ }
+let g:vimtex_compiler_latexmk = { 'build_dir': 'build' }
 let g:UltiSnipsExpandTrigger="<tab>"                                            
 let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"   

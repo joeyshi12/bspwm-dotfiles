@@ -5,17 +5,39 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-dir="~/.config/polybar/forest/scripts/rofi"
+# Available Styles
+# >> Created and tested on : rofi 1.6.0-1
+#
+# column_circle     column_square     column_rounded     column_alt
+# card_circle     card_square     card_rounded     card_alt
+# dock_circle     dock_square     dock_rounded     dock_alt
+# drop_circle     drop_square     drop_rounded     drop_alt
+# full_circle     full_square     full_rounded     full_alt
+# row_circle      row_square      row_rounded      row_alt
+
+theme="full_circle"
+dir="$HOME/.config/bspwm/rofi/powermenu"
+
+styles=($(ls -p --hide="colors.rasi" $dir/styles))
+color="bluish.rasi"
+
+# comment this line to disable random colors
+sed -i -e "s/@import .*/@import \"$color\"/g" $dir/styles/colors.rasi
+
+# comment these lines to disable random style
+#themes=($(ls -p --hide="powermenu.sh" --hide="styles" --hide="confirm.rasi" --hide="message.rasi" $dir))
+#theme="${themes[$(( $RANDOM % 24 ))]}"
+
 uptime=$(uptime -p | sed -e 's/up //g')
 
-rofi_command="rofi -theme $dir/powermenu.rasi"
+rofi_command="rofi -theme $dir/row_square"
 
 # Options
-shutdown=" Shutdown"
-reboot=" Restart"
-lock=" Lock"
-suspend=" Sleep"
-logout=" Logout"
+shutdown=""
+reboot=""
+lock=""
+suspend=""
+logout=""
 
 # Confirmation
 confirm_exit() {
@@ -32,9 +54,9 @@ msg() {
 }
 
 # Variable passed to rofi
-options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
 
-chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 2)"
 case $chosen in
     $shutdown)
 		ans=$(confirm_exit &)

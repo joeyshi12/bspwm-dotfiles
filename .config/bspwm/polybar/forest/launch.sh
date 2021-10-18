@@ -2,7 +2,7 @@
 
 # Add this script to your wm startup file.
 
-DIR="$HOME/.config/polybar/forest"
+DIR="$HOME/.config/bspwm/polybar/forest"
 
 # Terminate already running bar instances
 killall -q polybar

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/polybar"
+dir="$HOME/.config/bspwm/polybar"
 themes=(`ls --hide="launch.sh" $dir`)
 
 launch_bar() {

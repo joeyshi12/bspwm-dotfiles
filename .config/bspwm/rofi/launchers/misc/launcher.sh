@@ -13,7 +13,7 @@
 # column	row				row_center			screen			row_dock		row_dropdown
 
 theme="screen"
-dir="$HOME/.config/rofi/launchers/misc"
+dir="$HOME/.config/bspwm/rofi/launchers/misc"
 
 # comment these lines to disable random style
 #themes=($(ls -p --hide="launcher.sh" $dir))
