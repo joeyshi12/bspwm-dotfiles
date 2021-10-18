@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-    ~/.config/bspwm/rofi/bin/launcher_misc
+    ~/.config/bspwm/rofi/launcher.sh
 
 super + F1
     brave-browser
@@ -46,7 +46,7 @@ super + alt + r
 
 # power menu
 super + alt + q
-    ~/.config/bspwm/rofi/powermenu/powermenu.sh
+    ~/.config/bspwm/rofi/powermenu.sh
 
 # close and kill
 super + {_,shift + }w
