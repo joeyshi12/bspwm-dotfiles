@@ -8,7 +8,6 @@ Configuration files for running a stylish Linux desktop environment
 - Launcher: rofi
 - Compositor: picom (compile from repository https://github.com/yshui/picom)
 - Terminal: alacritty
-- Editor: vim
 - GUI File Manager: thunar
 
 ## Nice-to-haves
