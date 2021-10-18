@@ -5,7 +5,7 @@ Configuration files for running a stylish Linux desktop environment
 ## Essential packages list
 - Window Manager: bspwm
 - Task Bar: polybar
-- Launchers: rofi
+- Launcher: rofi
 - Compositor: picom (compile from repository https://github.com/yshui/picom)
 - Terminal: alacritty
 - Editor: vim
