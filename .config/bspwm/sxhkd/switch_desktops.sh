@@ -1,12 +1,15 @@
 #!/bin/bash
 
-# $1 is the desktop number of the current desktop
-if [ $1 -gt 3 ]; then
-    left_monitor_target=$(($1 - 3))
-    bspc desktop -f ^$left_monitor_target
-    bspc desktop -f ^$1
+# Switches to the $1-th desktop across each monitor and stays focused on current monitor
+left_target=$1
+right_target=$(($1 + 3))
+focused_desktop=$(bspc query -D -d focused --names)
+
+if [[ $focused_desktop -gt 3 ]]; then
+    bspc desktop -f ^$left_target
+    bspc desktop -f ^$right_target
 else
-    right_monitor_target=$(($1 + 3))
-    bspc desktop -f ^$right_monitor_target
-    bspc desktop -f ^$1
+    bspc desktop -f ^$right_target
+    bspc desktop -f ^$left_target
 fi
+
