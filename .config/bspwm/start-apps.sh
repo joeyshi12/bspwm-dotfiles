@@ -21,3 +21,12 @@ feh --bg-fill ~/.config/bspwm/wallpapers/aurora.jpg
 # Compositor
 /usr/local/bin/picom --experimental-backends --config ~/.config/bspwm/picom/picom.conf
 
+# Email + calendar clients
+if ! [ $(pidof geary) ]; then
+    geary &
+fi
+
+if ! [ $(pidof gnome-calendar) ]; then
+    gnome-calendar &
+fi
+

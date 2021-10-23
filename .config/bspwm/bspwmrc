@@ -14,7 +14,8 @@ bspc config focus_follows_pointer true
 bspc rule -a Screenkey manage=off
 bspc rule -a Zathura state=tiled
 bspc rule -a Thunar state=floating
-bspc rule -a Geary state=floating
+bspc rule -a Geary desktop='^3' follow=on
+bspc rule -a Gnome-calendar desktop='^6' follow=on
 
 ~/.config/bspwm/start-apps.sh
 

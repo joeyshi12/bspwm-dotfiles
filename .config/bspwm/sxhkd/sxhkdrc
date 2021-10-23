@@ -10,18 +10,6 @@ super + Return
 super + @space
     ~/.config/bspwm/rofi/launcher.sh
 
-super + F1
-    brave-browser
-
-super + F2
-    thunar
-
-super + F3
-    code
-
-super + F4
-    discord
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -109,9 +97,9 @@ super + {_,shift + }c
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+# focus the next monitor
+super + Tab
+    bspc monitor -f next
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -122,6 +110,10 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# focus desktops on all monitors
+super + alt + {1-6}
+    ~/.config/bspwm/sxhkd/switch_desktops.sh {1-6}
 
 #
 # preselect
