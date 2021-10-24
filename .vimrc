@@ -13,6 +13,12 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " General
+syntax on
+colorscheme onedark
+let g:airline_theme='onedark'
+let g:onedark_termcolors=256
+set background=dark
+filetype plugin indent on
 set nocompatible
 set noundofile
 set belloff=all
@@ -22,27 +28,22 @@ set pastetoggle=<F2>
 set linebreak
 set number
 set synmaxcol=200
-syntax on
-filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set splitbelow splitright
 set ph=15
-"colorscheme pop-punk
-"hi Normal guibg=NONE ctermbg=NONE
-"highlight LineNr ctermfg=NONE ctermbg=NONE
-"highlight! link SignColumn LineNr
-"highlight EndOfBuffer ctermfg=NONE ctermbg=NONE
 set signcolumn=yes
-colorscheme nord
-let g:airline_theme='base16'
+hi Normal guibg=NONE ctermbg=NONE
+highlight LineNr ctermfg=NONE ctermbg=NONE
+highlight! link SignColumn LineNr
+highlight EndOfBuffer ctermfg=NONE ctermbg=NONE
 
 " Syntastic
 let g:syntastic_python_flake8_args = "--max-line-length=150"
 let g:syntastic_python_checkers=['flake8']
 
-" LaTeX (vimtex/snipmate)
+" LaTeX
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_compiler_latexmk = { 'build_dir': 'build' }
