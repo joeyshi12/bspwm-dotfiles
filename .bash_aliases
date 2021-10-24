@@ -3,6 +3,7 @@ alias grep='grep --color=auto'
 alias v='vim'
 alias sv='sudo -E vim'
 alias r='ranger'
+alias copy='xclip -sel c'
 
 # Zips given directory into a tar file
 # $1 path to the directory
