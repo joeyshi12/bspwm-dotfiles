@@ -1,32 +1,28 @@
 #!/bin/bash
 
-# Notifications
-killall dunst
-
-# Monitor settings
-xrandr --output HDMI-1-1 --primary --mode 2560x1440 --output DVI-I-1 --mode 1920x1080 --right-of HDMI-1-1
-
-# Keyboard shortcuts
-sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
-
-# Polybar
-~/.config/bspwm/polybar/launch.sh
+# Restore wallpaper
+feh --bg-fill ~/.config/bspwm/wallpapers/aurora.jpg
 
 # Restore cursor theme
 xsetroot -cursor_name left_ptr &
 
-# Restore wallpaper
-feh --bg-fill ~/.config/bspwm/wallpapers/aurora.jpg
+# Polybar
+~/.config/bspwm/polybar/launch.sh
 
-# Compositor
-/usr/local/bin/picom --experimental-backends --config ~/.config/bspwm/picom/picom.conf
+# Keyboard shortcuts
+sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
-# Email + calendar clients
-if ! [ $(pidof geary) ]; then
-    geary &
+# Restart notifications daemon
+killall dunst
+
+# Open email + calendar
+if [[ -z $(pidof thunderbird) ]]; then
+    thunderbird &
 fi
 
-if ! [ $(pidof gnome-calendar) ]; then
+if [[ -z $(pidof gnome-calendar) ]]; then
     gnome-calendar &
 fi
 
+# Compositor
+/usr/local/bin/picom --experimental-backends --config ~/.config/bspwm/picom/picom.conf

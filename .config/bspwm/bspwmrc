@@ -1,5 +1,9 @@
-#! /bin/sh
+#!/bin/bash
 
+# Monitor settings
+xrandr --output HDMI-1-1 --primary --mode 2560x1440 --output DVI-I-1 --mode 1920x1080 --right-of HDMI-1-1
+
+# Window manager settings
 bspc monitor HDMI-1-1 -d 1 2 3
 bspc monitor DVI-I-1 -d 4 5 6
 
@@ -14,7 +18,7 @@ bspc config focus_follows_pointer true
 bspc rule -a Screenkey manage=off
 bspc rule -a Zathura state=tiled
 bspc rule -a Thunar state=floating
-bspc rule -a Geary desktop='^3' follow=on
+bspc rule -a Thunderbird desktop='^3' follow=on
 bspc rule -a Gnome-calendar desktop='^6' follow=on
 
 ~/.config/bspwm/start-apps.sh
