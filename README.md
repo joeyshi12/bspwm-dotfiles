@@ -10,6 +10,7 @@ Configuration files for running a stylish Linux desktop environment
 - Terminal: alacritty
 - GUI File Manager: thunar
 - Lockscreen: betterlockscreen (compile dependencies + repo from https://github.com/betterlockscreen/betterlockscreen#how-it-works)
+    - Regenerate lockscreen images with `betterlockscreen -u <path-to-image>`
 
 ## Nice-to-haves
 - System Info Fetcher: neofetch
