@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya
-## Mail    : adi1090x@gmail.com
-## Github  : @adi1090x
-## Twitter : @adi1090x
-
 dir="~/.config/bspwm/rofi/styles"
 uptime=$(uptime -p | sed -e 's/up //g')
 
@@ -57,10 +52,10 @@ case $chosen in
         fi
         ;;
     $lock)
-		if [[ -f /usr/bin/i3lock ]]; then
+		if [[ -f /usr/local/bin/betterlockscreen ]]; then
+			betterlockscreen -l blur
+		elif [[ -f /usr/bin/i3lock ]]; then
 			i3lock
-		elif [[ -f /usr/bin/betterlockscreen ]]; then
-			betterlockscreen -l
 		fi
         ;;
     $suspend)
