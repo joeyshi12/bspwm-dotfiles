@@ -2,6 +2,13 @@
 
 Configuration files for running a stylish Linux desktop environment
 
+## Table of contents
+1. [Essential packages list](#essential-packages-list)
+2. [Nice-to-haves](#nice-to-haves)
+3. [Installation](#installation)
+4. [Useful features](#useful-features)
+5. [Notes](#notes)
+
 ## Essential packages list
 - Window Manager: bspwm
 - Task Bar: polybar
