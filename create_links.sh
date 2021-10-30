@@ -27,6 +27,9 @@ done
 # Link profile
 create_link $dir/.profile ~/.profile
 
+# Link Xresources
+create_link $dir/.Xresources ~/.Xresources
+
 # Link vimrc
 create_link $dir/.vimrc ~/.vimrc
 
