@@ -21,6 +21,7 @@ Configuration files for running a stylish Linux desktop environment
 
 ## Installation
 - Install essential packages using your distro's package manager (may be one of `apt`, `pacman`, `dnf`, etc...)
+- Install themes, fonts, and icons by moving their unzipped folders into `~/usr/share/themes, fonts, icons` respectively
 - Run the `create_links.sh` script to apply the configs
 
 ## Useful features
