@@ -4,9 +4,7 @@ Plug 'dense-analysis/ale'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
-
 Plug 'preservim/nerdtree'
-
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
