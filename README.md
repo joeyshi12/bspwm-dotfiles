@@ -9,6 +9,8 @@ Configuration files for running a stylish Linux desktop environment
 - Compositor: picom (compile from repository https://github.com/yshui/picom)
 - Terminal: alacritty
 - GUI File Manager: thunar
+- Email Client: thunderbird
+- Calander: gnome-calendar
 - Lockscreen: betterlockscreen (compile dependencies + repo from https://github.com/betterlockscreen/betterlockscreen#how-it-works)
     - Regenerate lockscreen images with `betterlockscreen -u <path-to-image>`
 
