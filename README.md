@@ -35,5 +35,5 @@ Configuration files for running a stylish Linux desktop environment
 - Monitor settings are handled with `xrandr` in `~/.config/bspwm/bspwmrc`
 - Start-up applications and other initialization are handled in `~/.config/.bspwm/start-apps`
 
-![aurora_snapshot_0](https://user-images.githubusercontent.com/46363213/137676878-387c8ac1-02e5-4858-b7dc-16a98bdf6e66.png)
-![aurora_snapshot_1](https://user-images.githubusercontent.com/46363213/137676883-bcaee77a-c1ed-46c9-bbf5-1b64d2d619b9.png)
+![snapshot_0](images/snapshot_0.png)
+![snapshot_1](images/snapshot_1.png)
