@@ -14,6 +14,7 @@ sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 # Restart notifications daemon
 killall dunst
+dunst &
 
 # Open email + calendar
 if [[ -z $(pidof thunderbird) ]]; then

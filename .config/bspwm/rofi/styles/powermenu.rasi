@@ -45,8 +45,8 @@ textbox-prompt-colon {
 	padding: 						2px 0px 0px 5px;
 	background-color: 				@bga;
 	text-color: 					@ac;
-	expand: false;
-	str: "";
+	expand:                         false;
+	str:                            "";
 	font:							"feather 12";
 }
 
@@ -85,7 +85,7 @@ listview {
 }
 
 mainbox {
-    background-color:               @al;
+    background-color:               @bga;
 	border:							0px;
     border-radius:                  0px;
 	border-color:					@ac;
@@ -95,7 +95,7 @@ mainbox {
 }
 
 element {
-    background-color:               @al;
+    background-color:               @bga;
     text-color:                     @fg;
     orientation:                    horizontal;
     border-radius:                  0px;
@@ -105,6 +105,11 @@ element {
 element-icon {
     size:                           24px;
     border:                         0px;
+    background-color:               @bga;
+}
+
+element-icon selected {
+    background-color:               @se;
 }
 
 element-text {
@@ -112,6 +117,13 @@ element-text {
     horizontal-align:               0;
     vertical-align:                 0.5;
     margin:                         0px 2.5px 0px 2.5px;
+    background-color:               @bga;
+    text-color:                     @fg;
+}
+
+element-text selected {
+    background-color:               @se;
+    text-color:                     @bga;
 }
 
 element selected {

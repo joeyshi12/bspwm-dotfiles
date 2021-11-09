@@ -27,8 +27,9 @@ done
 # Link profile
 create_link $dir/.profile ~/.profile
 
-# Link Xresources
+# Link xinitrc
 create_link $dir/.Xresources ~/.Xresources
+create_link $dir/.xinitrc ~/.xinitrc
 
 # Link vimrc
 create_link $dir/.vimrc ~/.vimrc
@@ -36,7 +37,11 @@ create_link $dir/.vimrc ~/.vimrc
 # Link tmux.conf
 create_link $dir/.tmux.conf ~/.tmux.conf
 
-# Link bashrc
-create_link $dir/.bashrc ~/.bashrc
-create_link $dir/.bash_aliases ~/.bash_aliases
-
+# Link shell config
+if [[ $SHELL == "/bin/zsh" ]]; then
+    create_link $dir/.zshrc ~/.zshrc
+    create_link $dir/.aliases ~/.zsh_aliases
+else
+    create_link $dir/.bashrc ~/.bashrc
+    create_link $dir/.aliases ~/.bash_aliases
+fi
