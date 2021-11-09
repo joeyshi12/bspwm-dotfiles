@@ -16,13 +16,13 @@ sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 killall dunst
 dunst &
 
-# Open email + calendar
+# Start-up apps
 if [[ -z $(pidof thunderbird) ]]; then
     thunderbird &
 fi
 
-if [[ -z $(pidof gnome-calendar) ]]; then
-    gnome-calendar &
+if [[ -z $(pidof signal-desktop) ]]; then
+    signal-desktop &
 fi
 
 # Compositor

@@ -19,7 +19,7 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Zathura state=tiled
 bspc rule -a Thunar state=floating
 bspc rule -a Thunderbird desktop='^3' follow=on
-bspc rule -a Gnome-calendar desktop='^6' follow=on
+bspc rule -a Signal desktop='^6' follow=on
 
 ~/.config/bspwm/start-apps.sh
 
