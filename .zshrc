@@ -8,12 +8,16 @@ fi
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/nvm/init-nvm.sh
 
+# Command history
+export HISTFILE=~/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=1000
+
 set -o vi
-export BROWSER=brave
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# Alias definitions.
+# Alias definitions
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi

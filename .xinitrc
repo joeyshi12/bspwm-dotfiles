@@ -1,2 +1,2 @@
 xrdb -merge ~/.Xresources
-exec bspwm
+exec dbus-launch bspwm
