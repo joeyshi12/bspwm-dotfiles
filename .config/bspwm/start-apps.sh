@@ -25,4 +25,4 @@ if [[ -z $(pidof gnome-calendar) ]]; then
 fi
 
 # Compositor
-/usr/local/bin/picom --experimental-backends --config ~/.config/bspwm/picom/picom.conf
+picom --config ~/.config/bspwm/picom/picom.conf
