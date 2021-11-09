@@ -6,7 +6,7 @@ Configuration files for running a stylish Linux desktop environment
 - Window Manager: bspwm
 - Task Bar: polybar
 - Launcher: rofi
-- Compositor: picom (compile from repository https://github.com/yshui/picom)
+- Compositor: picom
 - Terminal: alacritty
 - GUI File Manager: thunar
 - Email Client: thunderbird
