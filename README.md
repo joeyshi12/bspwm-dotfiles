@@ -1,6 +1,6 @@
 # dotfiles
 
-Configuration files for running a stylish Linux desktop environment
+Personal configuration files for running a stylish Arch Linux desktop environment
 
 ## Essential packages list
 - Window Manager: bspwm
