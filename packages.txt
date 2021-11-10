@@ -13,6 +13,7 @@ discord
 dunst
 fakeroot
 feh
+flameshot
 flex
 gcc
 git
@@ -41,6 +42,7 @@ pulseaudio-bluetooth
 pulsemixer
 ranger
 rofi
+signal-desktop
 steam
 sudo
 sxhkd
@@ -49,11 +51,13 @@ thunar
 thunderbird
 tmux
 ttf-liberation
+ueberzug
 vi
 vim
 which
 wqy-zenhei
 xclip
+xdotool
 xf86-video-vesa
 xorg-bdftopcf
 xorg-docs
