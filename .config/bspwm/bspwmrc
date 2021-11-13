@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Monitor settings
-xrandr --output HDMI-0 --primary --mode 2560x1440 --output DVI-I-1 --mode 1920x1080 --right-of HDMI-0
+xrandr --output DP-2 --primary --mode 2560x1440 --output DVI-I-1 --mode 1920x1080 --right-of DP-2
 
 # Window manager settings
 bspc monitor HDMI-0 -d  1 2 3

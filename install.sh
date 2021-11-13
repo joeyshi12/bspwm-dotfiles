@@ -3,8 +3,7 @@
 dir="$HOME/Workspace/dotfiles"
 
 # Install vim-plug (https://github.com/junegunn/vim-plug#installation)
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+cp -r $dir/.vim ~
 
 # Install themes, fonts, icons
 theme_dir="$HOME/.local/share/themes"
