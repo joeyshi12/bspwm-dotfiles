@@ -22,4 +22,6 @@ bspc rule -a Thunar state=floating
 bspc rule -a Thunderbird desktop='^3' follow=on
 bspc rule -a Signal desktop='^6' follow=on
 
+wmname LG3D # Fixes problems with JDK versions assuming a reparenting window manager
+
 ~/.config/bspwm/start-apps.sh

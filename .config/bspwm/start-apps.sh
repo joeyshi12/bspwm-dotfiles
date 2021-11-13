@@ -13,8 +13,7 @@ xsetroot -cursor_name left_ptr &
 sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 # Restart notifications daemon
-killall dunst
-dunst &
+killall dunst && dunst &
 
 # Start-up apps
 if [[ -z $(pidof thunderbird) ]]; then
