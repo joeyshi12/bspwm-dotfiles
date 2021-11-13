@@ -6,13 +6,14 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 - [Rice info](#rice-info)
 - [Installation](#installation)
 - [Window management tricks](#window-management-tricks)
-- [Monitor settings](#monitor-settings)
-- [Network settings](#network-settings)
-- [Bluetooth settings](#bluetooth-settings)
-- [Audio settings](#audio-settings)
+- Settings info
+    - [Monitor settings](#monitor-settings)
+    - [Network settings](#network-settings)
+    - [Bluetooth settings](#bluetooth-settings)
+    - [Audio settings](#audio-settings)
 
 HDMI-0 | DVI-I-1
-- | -
+------ | -------
 ![snapshot_0](images/snapshot_0.png) | ![snapshot_1](images/snapshot_1.png)
 
 ## Rice info
