@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Monitor settings
-xrandr --output DP-2 --primary --mode 2560x1440 --output DVI-I-1 --mode 1920x1080 --right-of DP-2
+xrandr --output DP-2 --mode 2560x1440 --primary \
+       --output DVI-I-1 --mode 1920x1080 --right-of DP-2
 
 # Window manager settings
-bspc monitor HDMI-0 -d  1 2 3
+bspc monitor DP-2 -d 1 2 3
 bspc monitor DVI-I-1 -d 4 5 6
 
 bspc config border_width          0
@@ -22,4 +23,3 @@ bspc rule -a Thunderbird desktop='^3' follow=on
 bspc rule -a Signal desktop='^6' follow=on
 
 ~/.config/bspwm/start-apps.sh
-
