@@ -68,4 +68,3 @@ HDMI-0 | DVI-I-1
 ## Audio settings
 - Packages: `pulseaudio-alsa pulseaudio-bluetooth pulsemixer`
 - Run `pulsemixer` to manage audio from a terminal user interface
-- Set default mic/source and speaker/sink in `.config/pulse/default.pa`
