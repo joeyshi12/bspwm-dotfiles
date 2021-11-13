@@ -12,8 +12,8 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
     - [Bluetooth settings](#bluetooth-settings)
     - [Audio settings](#audio-settings)
 
-HDMI-0 | DVI-I-1
------- | -------
+DP-2 | DVI-I-1
+---- | -------
 ![snapshot_0](images/snapshot_0.png) | ![snapshot_1](images/snapshot_1.png)
 
 ## Rice info
