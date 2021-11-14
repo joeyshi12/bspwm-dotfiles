@@ -27,6 +27,7 @@ dotfiles=(
     ".config/gtk-3.0"
     ".config/ranger"
     ".config/betterlockscreenrc"
+    ".zlogin"
     ".zshrc"
     ".zsh_aliases"
     ".vimrc"
