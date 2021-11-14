@@ -27,11 +27,10 @@ dotfiles=(
     ".config/gtk-3.0"
     ".config/ranger"
     ".config/betterlockscreenrc"
-    ".zsh_aliases"
     ".zshrc"
+    ".zsh_aliases"
     ".vimrc"
     ".tmux.conf"
-    ".profile"
     ".xinitrc"
     ".Xresources"
 )

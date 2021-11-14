@@ -8,14 +8,19 @@ fi
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/nvm/init-nvm.sh
 
+set -o vi
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Command history
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=1000
 
-set -o vi
-export VISUAL=vim
-export EDITOR="$VISUAL"
+# set PATH so it includes user's private bin if it exists
+if [ -d ~/.local/bin ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 # Alias definitions
 if [ -f ~/.zsh_aliases ]; then
