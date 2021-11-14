@@ -50,7 +50,8 @@ DP-2 | DVI-I-1
 - More details can be found in `.config/bspwm/sxhkd/sxhkdrc`
 
 ## Monitor settings
-- Monitor settings are handled with `xrandr` in `~/.config/bspwm/bspwmrc`
+- Monitor orientation and resolution settings are configured in `~/.xinitrc`
+- Workspace allocation across monitors is configured in `~/.config/bspwm/bspwmrc`
 - View available monitors and modes by running `xrandr`
 
 ## Network settings
