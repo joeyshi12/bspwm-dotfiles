@@ -33,12 +33,11 @@ DP-2 | DVI-I-1
 ## Installation
 - Install rice-info packages using your distro's package manager (may be one of `apt`, `pacman`, `dnf`, etc...).
     - All packages used to run the desktop environment are listed in packages.txt
-- Install themes, fonts, and icons by moving their unzipped folders into `~/usr/share/themes, fonts, icons` respectively
-    - Polybar fonts: `.fonts/polybar.tar.gz`
+- Install base themes, fonts, icons, and link dotfiles by running `./install.sh`
+- Install additional themes, fonts, and icons by moving their unzipped folders into `~/usr/share/themes, fonts, icons` respectively
     - Fonts for the terminal: `npm install git://github.com/adobe-fonts/source-code-pro.git#release`  (https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro)
     - Fonts for Steam (in case of text-rendering bugs): `pacman -S ttf-liberation`
     - `fc-cache -v` to reload font cache
-- Run the `create_links.sh` script and restart computer to apply the config files
 
 ## Window management tricks
 - `super` is likely the windows key on your keyboard
