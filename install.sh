@@ -33,7 +33,8 @@ dotfiles=(
     ".vimrc"
     ".tmux.conf"
     ".xinitrc"
-    ".Xresources"
+    ".Xresources",
+    ".pylintrc"
 )
 
 for file in "${dotfiles[@]}"; do

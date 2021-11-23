@@ -2,7 +2,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias v='vim'
 alias sv='sudo -E vim'
-alias r='ranger'
 alias copy='xclip -sel c'
 
 alias ga='git add'
@@ -23,12 +22,19 @@ alias ta='tmux attach -t'
 alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t'
 
+# Runs ranger and changes user to current ranger directory on quit
+r() {
+    local target=~/.cache/ranger/rangerdir
+    ranger --choosedir=$target
+    cd "$(cat $target)"
+}
+
 # Zips given directory into a tar file
 # $1 path to the directory
 tarzip() {
     if [ -d "$1" ]; then
         file_name="$(basename $1).tar.gz"
-        tar -czvf $file_name $1 
+        tar -czvf $file_name $1
     else
         echo Error: cannot find directory at $1
     fi
