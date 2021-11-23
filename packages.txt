@@ -8,7 +8,6 @@ bluez
 bluez-utils
 brave-bin
 bspwm
-cmatrix
 discord
 dunst
 fakeroot
