@@ -36,6 +36,10 @@ super + alt + r
 super + alt + q
     ~/.config/bspwm/rofi/powermenu.sh
 
+# dunst
+super + {grave, BackSpace}
+    dunstctl {history-pop, close-all}
+
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}

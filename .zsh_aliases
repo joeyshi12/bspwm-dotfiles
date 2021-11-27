@@ -9,6 +9,7 @@ alias gaa='git add --all'
 alias gb='git branch'
 alias gc='git commit -v'
 alias gl='git pull'
+alias gup='git pull --rebase'
 alias gp='git push'
 alias gf='git fetch'
 alias gco='git checkout'
@@ -22,19 +23,32 @@ alias ta='tmux attach -t'
 alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t'
 
+<<<<<<< HEAD
 # Runs ranger and changes user to current ranger directory on quit
 r() {
     local target=~/.cache/ranger/rangerdir
     ranger --choosedir=$target
     cd "$(cat $target)"
+=======
+# Executes ranger and changes into current ranger directory when quitting
+r() {
+    local dir=~/.cache/ranger/rangerdir
+    ranger --choosedir=$dir
+    cd "$(cat $dir)"
+>>>>>>> f29143a (updated files)
 }
 
 # Zips given directory into a tar file
 # $1 path to the directory
 tarzip() {
     if [ -d "$1" ]; then
+<<<<<<< HEAD
         file_name="$(basename $1).tar.gz"
         tar -czvf $file_name $1
+=======
+        local file_name="$(basename $1).tar.gz"
+        tar -czvf $file_name $1 
+>>>>>>> f29143a (updated files)
     else
         echo Error: cannot find directory at $1
     fi
