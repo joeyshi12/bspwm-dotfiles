@@ -8,6 +8,7 @@ alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
 alias gc='git commit -v'
+alias gcl='git clone --recurse-submodules'
 alias gl='git pull'
 alias gup='git pull --rebase'
 alias gp='git push'
@@ -19,9 +20,9 @@ alias gdc='git diff --cached'
 alias glg='git log --graph'
 
 alias t='tmux'
-alias ta='tmux attach -t'
+alias ta='tmux attach-session'
 alias tl='tmux list-sessions'
-alias tk='tmux kill-session -t'
+alias tk='tmux kill-session'
 
 # Runs ranger and changes user to current ranger directory on quit
 r() {
