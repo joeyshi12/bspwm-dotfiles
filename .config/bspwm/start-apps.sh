@@ -20,9 +20,5 @@ if [[ -z $(pidof thunderbird) ]]; then
     thunderbird &
 fi
 
-if [[ -z $(pidof signal-desktop) ]]; then
-    signal-desktop &
-fi
-
 # Compositor
 picom --config ~/.config/bspwm/picom/picom.conf

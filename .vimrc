@@ -24,15 +24,16 @@ set number
 set splitbelow splitright
 set ph=15
 set signcolumn=yes
-set synmaxcol=200
+"set synmaxcol=200
 
-" Formatting
+" Indenting
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
 set autoindent
 set smartindent
+set cindent
 
 " Colour scheme
 colorscheme onedark

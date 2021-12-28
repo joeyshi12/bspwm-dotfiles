@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir="$HOME/Workspace/dotfiles"
+dir=$(dirname $0)
 
 # Install vim-plug (https://github.com/junegunn/vim-plug#installation)
 cp -r $dir/.vim ~
@@ -33,7 +33,7 @@ dotfiles=(
     ".vimrc"
     ".tmux.conf"
     ".xinitrc"
-    ".Xresources",
+    ".Xresources"
     ".pylintrc"
 )
 
