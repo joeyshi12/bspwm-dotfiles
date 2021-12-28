@@ -25,6 +25,7 @@ DP-2 | DVI-I-1
     - Ubuntu: https://github.com/yshui/picom/
 - Terminal: alacritty
 - GUI File Manager: thunar
+    - Install `gvfs` if usb devices are not being listed 
 - Email Client: thunderbird
 - Bootloader: grub
 - Lockscreen: betterlockscreen (compile dependencies + repo from https://github.com/betterlockscreen/betterlockscreen#how-it-works)
