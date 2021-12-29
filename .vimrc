@@ -22,9 +22,8 @@ set encoding=utf-8
 set linebreak
 set number
 set splitbelow splitright
-set ph=15
+set pumheight=15
 set signcolumn=yes
-"set synmaxcol=200
 
 " Indenting
 set shiftwidth=4
@@ -33,17 +32,13 @@ set softtabstop=4
 set expandtab
 set autoindent
 set smartindent
-set cindent
 
 " Colour scheme
 colorscheme onedark
 let g:airline_theme='onedark'
 let g:onedark_termcolors=256
 set background=dark
-hi Normal guibg=NONE ctermbg=NONE
-highlight LineNr ctermfg=NONE ctermbg=NONE
-highlight! link SignColumn LineNr
-highlight EndOfBuffer ctermfg=NONE ctermbg=NONE
+highlight Normal guibg=NONE ctermbg=NONE
 
 " LaTeX
 let g:vimtex_quickfix_open_on_warning = 0
@@ -54,6 +49,5 @@ let g:vimtex_compiler_latexmk = { 'build_dir': 'build' }
 cmap w!! w !sudo tee %
 map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
-map <F5>  :set spell!<CR>
 map <C-\> :NERDTreeToggle<CR>
 imap <C-\> <ESC>:NERDTreeToggle<CR>
