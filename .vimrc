@@ -51,3 +51,15 @@ map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
 map <C-\> :NERDTreeToggle<CR>
 imap <C-\> <ESC>:NERDTreeToggle<CR>
+
+" Autocommands
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+augroup TRIM_WHITESPACE
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
+augroup END
