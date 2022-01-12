@@ -4,6 +4,7 @@ Plug 'dense-analysis/ale'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim'
 Plug 'preservim/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
@@ -44,6 +45,9 @@ highlight Normal guibg=NONE ctermbg=NONE
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_compiler_latexmk = { 'build_dir': 'build' }
+set conceallevel=1
+let g:tex_conceal='abdmg'
+hi Conceal ctermbg=none
 
 " Mappings
 cmap w!! w !sudo tee %

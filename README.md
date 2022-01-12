@@ -12,12 +12,13 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
     - [Bluetooth settings](#bluetooth-settings)
     - [Audio settings](#audio-settings)
 
-DP-2 | DVI-I-1
----- | -------
+HDMI-0 | DVI-I-1
+------ | -------
 ![snapshot_0](images/snapshot_0.png) | ![snapshot_1](images/snapshot_1.png)
 
 ## Rice info
 - Window Manager: bspwm
+- Display Manager: lightdm
 - Task Bar: polybar
 - Launcher: rofi
 - Compositor: picom (requires a version with rounded corner support)
@@ -25,7 +26,7 @@ DP-2 | DVI-I-1
     - Ubuntu: https://github.com/yshui/picom/
 - Terminal: alacritty
 - GUI File Manager: thunar
-    - Install `gvfs` if usb devices are not being listed 
+    - Install `gvfs` if usb devices are not being listed
 - Email Client: thunderbird
 - Bootloader: grub
 - Lockscreen: betterlockscreen (compile dependencies + repo from https://github.com/betterlockscreen/betterlockscreen#how-it-works)
@@ -50,7 +51,19 @@ DP-2 | DVI-I-1
 - More details can be found in `.config/bspwm/sxhkd/sxhkdrc`
 
 ## Monitor settings
-- Monitor orientation and resolution settings are configured in `~/.xinitrc`
+- Monitor orientation and resolution settings are configured in `/etc/X11/xorg.conf.d/52-resolution-fix.conf`:
+```
+Section "Monitor"
+    Identifier "HDMI-0"
+    Option "PreferredMode" "2560x1440"
+    Option "Primary" "1"
+EndSection
+Section "Monitor"
+    Identifier "DVI-I-1"
+    Option "PreferredMode" "1920x1080"
+    Option "RightOf" "HDMI-0"
+EndSection
+```
 - Workspace allocation across monitors is configured in `~/.config/bspwm/bspwmrc`
 - View available monitors and modes by running `xrandr`
 
