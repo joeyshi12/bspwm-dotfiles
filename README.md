@@ -33,8 +33,10 @@ HDMI-0 | DVI-I-1
     - Regenerate lockscreen images with `betterlockscreen -u <path-to-image>`
 
 ## Installation
-- Install rice-info packages using your distro's package manager (may be one of `apt`, `pacman`, `dnf`, etc...).
-    - All packages used to run the desktop environment are listed in packages.txt
+- Install packages from pkglist with your package manager (may be one of `apt`, `pacman`, `dnf`, etc...).
+    - Can simply use `pacman -S $(cat pkglist)` on Arch
+- Manually install packages from pkglocallist
+    - May want to use external package managers for community packages (use yay if on Arch)
 - Install base themes, fonts, icons, and link dotfiles by running `./install.sh`
 - Install additional themes, fonts, and icons by moving their unzipped folders into `~/usr/share/themes, fonts, icons` respectively
     - Fonts for the terminal: `npm install git://github.com/adobe-fonts/source-code-pro.git#release`  (https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro)
