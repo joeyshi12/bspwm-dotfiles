@@ -10,6 +10,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
 " General
@@ -48,6 +49,10 @@ let g:vimtex_compiler_latexmk = { 'build_dir': 'build' }
 set conceallevel=1
 let g:tex_conceal='abdmg'
 hi Conceal ctermbg=none
+" Set ultisnips triggers
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Mappings
 cmap w!! w !sudo tee %
@@ -55,6 +60,8 @@ map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
 map <C-\> :NERDTreeToggle<CR>
 imap <C-\> <ESC>:NERDTreeToggle<CR>
+" gvim should be installed for copy-to-clipboard to work
+vmap <C-c> "+y
 
 " Autocommands
 fun! TrimWhitespace()

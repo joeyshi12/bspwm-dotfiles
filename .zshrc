@@ -6,9 +6,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/nvm/init-nvm.sh
 
 set -o vi
+bindkey "^?" backward-delete-char
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
