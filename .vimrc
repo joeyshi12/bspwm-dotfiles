@@ -1,16 +1,21 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'lervag/vimtex'
-Plug 'KeitaNakamura/tex-conceal.vim'
+Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install()} }
 Plug 'preservim/nerdtree'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'Raimondi/delimitMate'
+
+Plug 'SirVer/ultisnips'
+Plug 'joeyshi12/vim-snippets'
+" downgrade vimtex to avoid conflicts with tex-conceal
+Plug 'lervag/vimtex', {'tag': 'v1.6'}
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
 " General
@@ -26,6 +31,9 @@ set number
 set splitbelow splitright
 set pumheight=15
 set signcolumn=yes
+let delimitMate_expand_cr=2 " Expand inside brackets
+let g:coc_node_path = '~/.nvm/versions/node/v17.0.1/bin/node'
+let g:ale_disable_lsp = 1
 
 " Indenting
 set shiftwidth=4
@@ -34,6 +42,7 @@ set softtabstop=4
 set expandtab
 set autoindent
 set smartindent
+set cindent
 
 " Colour scheme
 colorscheme onedark
@@ -43,12 +52,12 @@ set background=dark
 highlight Normal guibg=NONE ctermbg=NONE
 
 " LaTeX
+let g:tex_flavor = 'latex'
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_compiler_latexmk = { 'build_dir': 'build' }
-set conceallevel=1
+set conceallevel=2
 let g:tex_conceal='abdmg'
-hi Conceal ctermbg=none
 " Set ultisnips triggers
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
