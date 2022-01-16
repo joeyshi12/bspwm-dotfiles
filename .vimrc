@@ -65,12 +65,14 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Mappings
 cmap w!! w !sudo tee %
-map <C-n> :tabn<CR>
-map <C-p> :tabp<CR>
-map <C-\> :NERDTreeToggle<CR>
+nmap <C-n> :tabn<CR>
+nmap <C-p> :tabp<CR>
+nmap <C-\> :NERDTreeToggle<CR>
 imap <C-\> <ESC>:NERDTreeToggle<CR>
 " gvim should be installed for copy-to-clipboard to work
 vmap <C-c> "+y
+nmap <leader>rn <Plug>(coc-rename)
+nmap <silent>gd <Plug>(coc-definition)
 
 " Autocommands
 fun! TrimWhitespace()
