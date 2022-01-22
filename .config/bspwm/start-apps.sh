@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # Restore wallpaper
-feh --bg-fill ~/.config/bspwm/wallpapers/aurora.jpg
+feh --bg-fill ~/.config/bspwm/wallpapers/blue_unicat.png
+
+# Set display preferences
+xset s off
+xset -dpms
 
 # Restore cursor theme
 xsetroot -cursor_name left_ptr &

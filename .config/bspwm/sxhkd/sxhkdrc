@@ -105,6 +105,9 @@ super + bracket{left,right}
 super + Tab
     bspc monitor -f next
 
+super + shift + Tab
+    bspc node -m next
+
 # focus the older or newer node in the focus history
 super + {o,i}
 	bspc wm -h off; \

@@ -5,6 +5,7 @@ Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install()} }
 Plug 'preservim/nerdtree'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'SirVer/ultisnips'
 Plug 'joeyshi12/vim-snippets'
@@ -15,7 +16,6 @@ Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " General
@@ -45,10 +45,9 @@ set smartindent
 set cindent
 
 " Colour scheme
-colorscheme onedark
-let g:airline_theme='onedark'
 let g:onedark_termcolors=256
-set background=dark
+let g:airline_theme='onedark'
+colorscheme onedark
 highlight Normal guibg=NONE ctermbg=NONE
 
 " LaTeX
@@ -72,7 +71,8 @@ imap <C-\> <ESC>:NERDTreeToggle<CR>
 " gvim should be installed for copy-to-clipboard to work
 vmap <C-c> "+y
 nmap <leader>rn <Plug>(coc-rename)
-nmap <silent>gd <Plug>(coc-definition)
+nmap <leader>gd <Plug>(coc-definition)
+nmap ghp <Plug>(GitGutterPreviewHunk)
 
 " Autocommands
 fun! TrimWhitespace()

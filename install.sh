@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir=$(dirname $0)
+dir="$HOME/dotfiles"
 
 # Install vim-plug (https://github.com/junegunn/vim-plug#installation)
 cp -r $dir/.vim ~
@@ -27,7 +27,6 @@ dotfiles=(
     ".config/gtk-3.0"
     ".config/ranger"
     ".config/betterlockscreenrc"
-    ".zlogin"
     ".zshrc"
     ".zsh_aliases"
     ".vimrc"
