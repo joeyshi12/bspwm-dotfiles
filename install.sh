@@ -2,9 +2,6 @@
 
 dir="$HOME/dotfiles"
 
-# Install vim-plug (https://github.com/junegunn/vim-plug#installation)
-cp -r $dir/.vim ~
-
 # Install themes, fonts, icons
 theme_dir="$HOME/.local/share/themes"
 font_dir="$HOME/.local/share/fonts"
@@ -22,14 +19,15 @@ for icon in $(ls $dir/.icons); do tar -xf $dir/.icons/$icon -C $icon_dir; done
 dotfiles=(
     ".config/alacritty"
     ".config/bspwm"
+    ".config/picom"
     ".config/cava"
     ".config/dunst"
     ".config/gtk-3.0"
+    ".config/nvim"
     ".config/ranger"
     ".config/betterlockscreenrc"
     ".zshrc"
     ".zsh_aliases"
-    ".vimrc"
     ".tmux.conf"
     ".xinitrc"
     ".Xresources"

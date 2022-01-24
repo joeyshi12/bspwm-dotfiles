@@ -16,7 +16,7 @@
     width = 350
     height = 300
     origin = top-right
-    offset = 9x43
+    offset = 0x35
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -48,7 +48,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 4
+    frame_width = 3
 
     # Defines color of the frame around the notification window.
     frame_color = "#aaaaaa"
@@ -219,11 +219,9 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#212B30"
-    #foreground = "#7693ac"
-    #foreground = "#dffebe"
+    background = "#1e1e2e"
     foreground = "#ffffff"
-    frame_color = "#BA68C8"
+    frame_color = "#c9cbff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon

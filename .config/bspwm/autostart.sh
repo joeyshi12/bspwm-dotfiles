@@ -25,4 +25,4 @@ if [[ -z $(pidof thunderbird) ]]; then
 fi
 
 # Compositor
-picom --config ~/.config/bspwm/picom/picom.conf
+picom

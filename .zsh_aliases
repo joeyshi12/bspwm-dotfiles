@@ -1,6 +1,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias v='vim'
+alias v='nvim'
 alias sv='sudo -E vim'
 alias copy='xclip -sel c'
 

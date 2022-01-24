@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Add this script to your wm startup file.
-
-dir="$HOME/.config/bspwm/polybar"
-
 # Terminate already running bar instances
 killall -q polybar
 
@@ -12,5 +8,5 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
 for m in $(polybar --list-monitors | cut -d":" -f1); do
-    MONITOR=$m polybar -q main -c "$dir/config.ini" &	
+    MONITOR=$m polybar -q main -c "$HOME/.config/bspwm/polybar/config.ini" &
 done

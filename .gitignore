@@ -6,3 +6,6 @@ __pycache__/
 
 # gtk
 bookmarks
+
+# nvim plugins
+plugged/
