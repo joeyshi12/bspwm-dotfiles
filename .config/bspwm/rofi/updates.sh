@@ -7,6 +7,8 @@ get_total_updates() { UPDATES=$(checkupdates 2>/dev/null | wc -l); }
 while true; do
     get_total_updates
 
+    echo $UPDATES
+
     # notify user of updates
     if hash notify-send &>/dev/null; then
         if (( UPDATES > 50 )); then

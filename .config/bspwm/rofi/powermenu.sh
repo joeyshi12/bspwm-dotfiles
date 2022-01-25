@@ -52,7 +52,7 @@ case $chosen in
         fi
         ;;
     $lock)
-		if [[ -f /usr/local/bin/betterlockscreen ]]; then
+		if [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l blur
 		elif [[ -f /usr/bin/i3lock ]]; then
 			i3lock
