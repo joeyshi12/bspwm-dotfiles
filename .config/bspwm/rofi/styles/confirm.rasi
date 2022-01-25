@@ -1,15 +1,13 @@
-/* Confirm Dialog */
-
 @import "colors.rasi"
 
 * {
     background-color:       @bg;
     text-color:             @fg;
-	font:				 	"Iosevka Nerd Font 10";
+	font:					"SauceCodePro Nerd Font 12";
 }
 
 window {
-    width:      			210px;
+    width:      			270px;
     padding:    			25px;
     border:					0px 0px 1px 0px;
     border-radius:          0px;

@@ -18,7 +18,6 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Zathura state=tiled
 bspc rule -a Thunar state=floating
 bspc rule -a Thunderbird desktop='^6' follow=on
-bspc rule -a firefox rectangle=1000x800
 #bspc rule -a Signal desktop='^6' follow=on
 
 wmname LG3D # Fixes problems with JDK versions assuming a reparenting window manager
