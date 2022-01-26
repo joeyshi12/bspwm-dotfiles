@@ -205,6 +205,8 @@ colors:
   indexed_colors:
     - { index: 16, color: '0xF8BD96' }
     - { index: 17, color: '0xF5E0DC' }
+env:
+  TERM: xterm-256color
 
 # Visual Bell
 #
