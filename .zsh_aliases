@@ -24,10 +24,6 @@ alias ta='tmux attach-session'
 alias tl='tmux list-sessions'
 alias tk='tmux kill-session'
 
-# Hack to disable sleep
-alias enableSleep='sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target'
-alias disableSleep='sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target'
-
 # Runs ranger and changes user to current ranger directory on quit
 r() {
     local target=~/.cache/ranger/rangerdir

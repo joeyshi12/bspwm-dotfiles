@@ -7,9 +7,9 @@ theme_dir="$HOME/.local/share/themes"
 font_dir="$HOME/.local/share/fonts"
 icon_dir="$HOME/.local/share/icons"
 
-if [[ ! -d "$theme_dir" ]]; then mkdir -p $theme_dir; fi
-if [[ ! -d "$font_dir" ]]; then mkdir -p $font_dir; fi
-if [[ ! -d "$icon_dir" ]]; then mkdir -p $icon_dir; fi
+[[ ! -d "$theme_dir" ]] && mkdir -p $theme_dir
+[[ ! -d "$font_dir" ]] && mkdir -p $font_dir
+[[ ! -d "$icon_dir" ]] && mkdir -p $icon_dir
 
 for theme in $(ls $dir/.themes); do tar -xf $dir/.themes/$theme -C $theme_dir; done
 for font in $(ls $dir/.fonts); do tar -xf $dir/.fonts/$font -C $font_dir; done
