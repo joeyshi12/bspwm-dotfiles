@@ -50,13 +50,14 @@ endif
 call coc#config('python', {'pythonPath': s:current_python_path})
 
 " Indenting
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
-set expandtab
-set autoindent
-set smartindent
-set cindent
+set indentexpr="" " disable auto-inserting tabs
+"set shiftwidth=4
+"set tabstop=4
+"set softtabstop=4
+"set expandtab
+"set autoindent
+"set smartindent
+"set cindent
 
 " Colour scheme
 colorscheme catppuccin
@@ -66,7 +67,7 @@ let g:lightline = {'colorscheme': 'catppuccin'}
 let g:tex_flavor = 'latex'
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_view_general_viewer = 'zathura'
-let g:vimtex_compiler_latexmk = {'build_dir': 'build'}
+let g:vimtex_compiler_latexmk = {'build_dir': 'out'}
 set conceallevel=2
 let g:tex_conceal = 'abdmg'
 
@@ -91,12 +92,12 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Autocommands
 fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
 endfun
 
 augroup TRIM_WHITESPACE
-    autocmd!
-    autocmd BufWritePre * :call TrimWhitespace()
+  autocmd!
+  autocmd BufWritePre * :call TrimWhitespace()
 augroup END

@@ -22,6 +22,9 @@
             }
         }
     },
+    "snippets.extends": {
+        "latex": ["tex", "texmath"]
+    },
     "npm.binPath": "~/.nvm/versions/node/v17.0.1/bin/npm",
     "diagnostic.displayByAle": true,
     "coc.preferences.jumpCommand": "tabe"

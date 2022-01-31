@@ -3,6 +3,7 @@ alias grep='grep --color=auto'
 alias v='nvim'
 alias sv='sudo -E nvim'
 alias copy='xclip -sel c'
+alias diff='diff --color'
 
 alias ga='git add'
 alias gaa='git add --all'
