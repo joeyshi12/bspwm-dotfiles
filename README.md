@@ -18,7 +18,7 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 
 ## Rice info
 - Window Manager: bspwm
-- Display Manager: lightdm ()
+- Display Manager: lightdm
 - Task Bar: polybar
 - Launcher: rofi
 - Compositor: picom (requires a version with rounded corner support)
