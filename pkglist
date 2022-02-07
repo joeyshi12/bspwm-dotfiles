@@ -9,8 +9,9 @@ bluez
 bluez-utils
 bspwm
 ccls
-cmatrix
+cmake
 discord
+docker
 dunst
 fakeroot
 feh
@@ -45,13 +46,13 @@ m4
 make
 neofetch
 neovim
+net-tools
 networkmanager
 noto-fonts
 noto-fonts-emoji
 nvidia
 obs-studio
 p7zip
-pandoc
 patch
 pavucontrol
 pkgconf
@@ -60,9 +61,11 @@ pulseaudio-bluetooth
 pulsemixer
 python-distutils-extra
 python-pip
+python-pynvim
+qtcreator
 ranger
 rofi
-signal-desktop
+simplescreenrecorder
 steam
 sudo
 sxhkd
@@ -89,6 +92,7 @@ ttf-liberation
 typescript
 ueberzug
 unzip
+valgrind
 vi
 virtualbox
 virtualbox-host-modules-arch
