@@ -6,15 +6,15 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 - [Rice info](#rice-info)
 - [Installation](#installation)
 - [Window management tips](#window-management-tips)
-- Settings info
-    - [Monitor settings](#monitor-settings)
-    - [Network settings](#network-settings)
-    - [Bluetooth settings](#bluetooth-settings)
-    - [Audio settings](#audio-settings)
+- [Monitor settings](#monitor-settings)
+- [Network settings](#network-settings)
+- [Bluetooth settings](#bluetooth-settings)
+- [Audio settings](#audio-settings)
 
-HDMI-0 | DVI-I-1
------- | -------
-![snapshot_0](images/snapshot_0.png) | ![snapshot_1](images/snapshot_1.png)
+| HDMI-0     | DVI-I-1    |
+| ---------- | ---------- |
+| ![snapshot_2](images/snapshot_2.png) | ![snapshot_3](images/snapshot_3.png) |
+
 
 ## Rice info
 - Window Manager: bspwm
