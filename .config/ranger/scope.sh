@@ -138,6 +138,10 @@ handle_image() {
         #           - "${IMAGE_CACHE_PATH}" < "${FILE_PATH}" \
         #           && exit 6 || exit 1;;
 
+        ## Exclude GIFs
+        image/gif)
+            exit 1;;
+
         ## Image
         image/*)
             local orientation

@@ -20,9 +20,7 @@ sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 killall dunst && dunst &
 
 # Start-up apps
-if [[ -z $(pidof thunderbird) ]]; then
-    thunderbird &
-fi
+[[ -z $(pidof thunderbird) ]] && thunderbird &
 
 # Compositor
 picom
