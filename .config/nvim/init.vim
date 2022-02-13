@@ -72,7 +72,6 @@ set conceallevel=2
 let g:tex_conceal = 'abdmg'
 
 " Mappings
-cmap w!! w !sudo tee %
 nmap <C-n> :tabn<CR>
 nmap <C-p> :tabp<CR>
 nmap <C-\> :NERDTreeToggle<CR>
