@@ -11,7 +11,7 @@ xset -dpms
 xsetroot -cursor_name left_ptr &
 
 # Polybar
-~/.config/bspwm/polybar/launch.sh
+~/.config/bspwm/polybar/launch.sh &
 
 # Keyboard shortcuts
 sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
@@ -19,8 +19,8 @@ sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 # Restart notifications daemon
 killall dunst && dunst &
 
-# Start-up apps
-[[ -z $(pidof thunderbird) ]] && thunderbird &
+# Email client
+pgrep -x thunderbird > /dev/null || thunderbird &
 
 # Compositor
-picom
+pgrep -x picom > /dev/null || picom &

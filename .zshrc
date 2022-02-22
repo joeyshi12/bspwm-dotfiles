@@ -28,8 +28,8 @@ bindkey -v '^?' backward-delete-char
 
 # Command history
 export HISTFILE=~/.zsh_history
-export HISTSIZE=1000
-export SAVEHIST=1000
+export HISTSIZE=2000
+export SAVEHIST=2000
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
