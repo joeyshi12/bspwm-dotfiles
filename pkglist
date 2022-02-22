@@ -13,6 +13,7 @@ cmake
 cmatrix
 discord
 docker
+dotnet-sdk
 dunst
 fakeroot
 feh
@@ -46,13 +47,16 @@ linux-lts-headers
 m4
 make
 neofetch
+neomutt
 neovim
 net-tools
 networkmanager
+nm-connection-editor
 noto-fonts
 noto-fonts-emoji
 nvidia
 obs-studio
+obsidian
 p7zip
 patch
 pavucontrol
@@ -68,6 +72,7 @@ ranger
 rofi
 simplescreenrecorder
 steam
+strace
 sudo
 sxhkd
 texinfo
@@ -98,6 +103,7 @@ vi
 virtualbox
 virtualbox-host-modules-arch
 vlc
+w3m
 wget
 which
 wmname
