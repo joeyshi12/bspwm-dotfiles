@@ -11,25 +11,25 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 - [Bluetooth settings](#bluetooth-settings)
 - [Audio settings](#audio-settings)
 
-|HDMI-0|DVI-I-1|   
+|HDMI-0|DVI-I-1|
 |-|-|
 |![img](images/snapshot_2.png)|![img](images/snapshot_3.png)|
 
 
 ## Rice info
-- Window Manager: bspwm
-- Display Manager: lightdm
-- Task Bar: polybar
-- Launcher: rofi
-- Compositor: picom (requires a version with rounded corner support)
+- **Window Manager**: bspwm
+- **Display Manager: lightdm
+- **Task Bar**: polybar
+- **Launcher**: rofi
+- **Compositor**: picom (requires a version with rounded corner support)
     - Arch: https://aur.archlinux.org/packages/picom-rounded-corners/
     - Ubuntu: https://github.com/yshui/picom/
-- Terminal: alacritty
-- File Manager: thunar
+- **Terminal**: alacritty
+- **File Manager**: thunar
     - `gvfs` required for usb devices
     - `xarchiver` required for creating and extracting zip files
-- Email Client: thunderbird
-- Lockscreen: betterlockscreen (https://github.com/betterlockscreen/betterlockscreen#how-it-works)
+- **Email Client**: thunderbird
+- **Lockscreen**: betterlockscreen (https://github.com/betterlockscreen/betterlockscreen#how-it-works)
     - Regenerate lockscreen images with `betterlockscreen -u <path-to-image>`
 
 ## Installation
