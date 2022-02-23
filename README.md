@@ -38,6 +38,7 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 - Install community packages from pkglocallist
     - You can use an external package manager like `yay` on Arch
 - Install themes, fonts, icons, and dotfiles by running `./install.sh`
+    - Manage assets with `lxappearance`
 - Install additional themes, fonts, and icons by moving their unzipped folders into `~/usr/share/themes, fonts, icons` respectively
     - Fonts for the terminal: `npm install git://github.com/adobe-fonts/source-code-pro.git#release`  (https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro)
     - Fonts for Steam (in case of text-rendering bugs): `pacman -S ttf-liberation`

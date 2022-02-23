@@ -21,7 +21,6 @@ dotfiles=(
     ".config/bspwm"
     ".config/picom"
     ".config/cava"
-    ".config/dunst"
     ".config/gtk-3.0"
     ".config/nvim"
     ".config/ranger"

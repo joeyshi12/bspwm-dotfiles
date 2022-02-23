@@ -45,6 +45,7 @@ linux
 linux-firmware
 linux-lts
 linux-lts-headers
+lxappearance
 m4
 make
 neofetch
@@ -97,6 +98,7 @@ tmux
 ttf-fira-code
 ttf-jetbrains-mono
 ttf-liberation
+tumbler
 typescript
 ueberzug
 unzip
