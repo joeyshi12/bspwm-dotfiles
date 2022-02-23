@@ -4,7 +4,7 @@ killall -q polybar sxhkd dunst
 wmname LG3D # Fixes problems with JDK versions assuming a reparenting window manager
 
 # Restore wallpaper
-feh --bg-fill ~/.config/bspwm/wallpapers/blue_unicat.png
+feh --bg-fill ~/.config/bspwm/wallpapers/blue_unicat.png &
 
 # Set display preferences
 #xset s off
