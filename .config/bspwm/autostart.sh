@@ -4,7 +4,7 @@ killall -q polybar sxhkd dunst
 wmname LG3D # Fixes problems with JDK versions assuming a reparenting window manager
 
 # Restore wallpaper
-feh --bg-fill ~/.config/bspwm/wallpapers/blue_unicat.png &
+feh --bg-fill "$HOME/.config/bspwm/wallpapers/blue_unicat.png" &
 
 # Set display preferences
 #xset s off
@@ -26,11 +26,11 @@ done
 
 # Keyboard shortcuts
 while pgrep -u $UID -x sxhkd > /dev/null; do sleep 0.1; done
-sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
+sxhkd -c "$HOME/.config/bspwm/sxhkd/sxhkdrc" &
 
 # Notifications daemon
 while pgrep -u $UID -x dunst > /dev/null; do sleep 0.1; done
-dunst -conf ~/.config/bspwm/dunst/dunstrc &
+dunst -conf "$HOME/.config/bspwm/dunst/dunstrc" &
 
 # Compositor
 pgrep -x picom > /dev/null || picom &

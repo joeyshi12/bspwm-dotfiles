@@ -24,6 +24,7 @@ gcc
 gdb
 gimp
 git
+github-cli
 groff
 grub
 gvfs
@@ -90,6 +91,7 @@ texlive-publishers
 texlive-science
 thunar
 thunar-archive-plugin
+thunar-volman
 thunderbird
 tmux
 ttf-fira-code
