@@ -51,13 +51,13 @@ call coc#config('python', {'pythonPath': s:current_python_path})
 
 " Indenting
 set indentexpr="" " disable auto-inserting tabs
-"set shiftwidth=4
-"set tabstop=4
-"set softtabstop=4
-"set expandtab
-"set autoindent
-"set smartindent
-"set cindent
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab
+set autoindent
+set smartindent
+set cindent
 
 " Colour scheme
 colorscheme catppuccin
