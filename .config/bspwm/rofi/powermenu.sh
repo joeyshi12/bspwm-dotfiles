@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 dir="~/.config/bspwm/rofi"
 
@@ -26,9 +26,9 @@ msg() {
 }
 
 uptime=$(uptime -p | sed -e 's/up //g')
-chosen="$(echo -e "$options" | rofi -theme "$dir/powermenu.rasi" -p "Uptime: $uptime" -dmenu -selected-row 0)"
+choice="$(echo -e "$options" | rofi -theme "$dir/powermenu.rasi" -p "Uptime: $uptime" -dmenu -selected-row 0)"
 
-case $chosen in
+case $choice in
 	$shutdown)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
