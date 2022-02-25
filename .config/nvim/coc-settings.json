@@ -25,7 +25,7 @@
     "snippets.extends": {
         "latex": ["tex", "texmath"]
     },
-    "npm.binPath": "~/.nvm/versions/node/v17.0.1/bin/npm",
+    "npm.binPath": "~/.nvm/versions/node/v17.5.0/bin/npm",
     "diagnostic.displayByAle": true,
     "coc.preferences.jumpCommand": "tabe"
 }

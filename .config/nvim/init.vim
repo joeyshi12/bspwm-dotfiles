@@ -40,7 +40,7 @@ let g:ultisnips_python_quoting_style="double"
 
 " LSP
 let g:ale_disable_lsp = 1
-let g:coc_node_path = '~/.nvm/versions/node/v17.0.1/bin/node'
+let g:coc_node_path = '~/.nvm/versions/node/v17.5.0/bin/node'
 let g:coc_disable_transparent_cursor = 1
 if $CONDA_PREFIX == ""
   let s:current_python_path=$CONDA_PYTHON_EXE
@@ -76,7 +76,6 @@ nmap <C-n> :tabn<CR>
 nmap <C-p> :tabp<CR>
 nmap <C-\> :NERDTreeToggle<CR>
 imap <C-\> <ESC>:NERDTreeToggle<CR>
-" gvim should be installed for copy-to-clipboard to work
 vmap <C-c> "+y
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>gd <Plug>(coc-definition)

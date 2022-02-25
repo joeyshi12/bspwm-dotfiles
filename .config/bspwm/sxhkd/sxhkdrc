@@ -8,7 +8,11 @@ super + Return
 
 # program launcher
 super + @space
-	~/.config/bspwm/rofi/launcher.sh
+	rofi -no-config \
+			 -no-lazy-grab \
+			 -show drun \
+			 -modi drun \
+			 -theme ~/.config/bspwm/rofi/launcher.rasi
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -28,9 +32,13 @@ XF86AudioRaiseVolume
 XF86AudioMute
 	pulsemixer --toggle-mute
 
+# select window
+super + Up
+	~/.config/bspwm/rofi/window_selector.sh
+
 # brightness controls
-super + {Up, Down}
-	~/.config/bspwm/sxhkd/brightness.sh {+, -}
+super + {Left, Right}
+	~/.config/bspwm/sxhkd/brightness.sh {-, +}
 
 # quit/restart bspwm
 super + alt + r
