@@ -25,8 +25,7 @@ msg() {
          -e "Available Options  -  y / n"
 }
 
-uptime=$(uptime -p | sed -e 's/up //g')
-choice="$(echo -e "$options" | rofi -theme "$dir/powermenu.rasi" -p "Uptime: $uptime" -dmenu -selected-row 0)"
+choice="$(echo -e "$options" | rofi -theme "$dir/powermenu.rasi" -p "Catppuccin" -dmenu -selected-row 0)"
 
 case $choice in
     $shutdown)

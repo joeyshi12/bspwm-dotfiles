@@ -19,7 +19,7 @@ window {
     border:                 0px 0px 0px 0px;
     border-color:           @bga;
     border-radius:          0px;
-    width:                  500px;
+    width:                  600px;
     location:               center;
     x-offset:               0;
     y-offset:               0;
@@ -59,7 +59,7 @@ inputbar {
 listview {
     background-color:       @al;
     padding:                0px;
-    columns:                1;
+    columns:                2;
     lines:                  6;
     spacing:                5px;
     cycle:                  true;

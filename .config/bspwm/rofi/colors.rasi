@@ -1,7 +1,7 @@
 * {
     al:   #00000000;
-    bg:   #1e1e2e;
-    bga:  #1e1e2e;
+    bg:   #1E1E2E;
+    bga:  #1E1E2E;
     fg:   #C4C7C5;
     ac:   #EC407A;
     se:   #96CDFB;
