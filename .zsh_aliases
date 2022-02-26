@@ -38,6 +38,12 @@ crun() {
     gcc $1 && ./a.out && rm a.out
 }
 
+# Runs fzf and opens chosen file in nvim
+se() {
+    local file=$(fzf)
+    [ -z "$file" ] || nvim $file
+}
+
 # Runs ranger and changes user to current ranger directory on quit
 r() {
     local target=~/.cache/ranger/rangerdir
