@@ -20,11 +20,11 @@ super + alt + q
 
 # select window
 super + Up
-    rofi -no-config \
-         -no-lazy-grab \
-         -show window \
-         -modi window \
-         -theme ~/.config/bspwm/rofi/launcher.rasi
+    ~/.config/bspwm/rofi/window_selector.sh
+
+# select network
+super + Down
+    ~/.config/bspwm/rofi/wifi_menu.sh
 
 # bspwm hotkeys
 @Print

@@ -16,7 +16,7 @@ confirm_exit() {
          -i\
          -no-fixed-num-lines\
          -p "Are You Sure? : "\
-         -theme $dir/confirm.rasi
+         -theme $dir/input.rasi
 }
 
 # Message
