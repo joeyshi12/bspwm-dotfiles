@@ -40,7 +40,7 @@ crun() {
 
 # Runs fzf and opens chosen file in nvim
 se() {
-    local file=$(fzf)
+    local file=$(fzf --preview 'cat {}')
     [ -z "$file" ] || nvim $file
 }
 

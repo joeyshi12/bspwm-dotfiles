@@ -5,7 +5,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Raimondi/delimitMate'
-Plug 'airblade/vim-gitgutter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'nvim-lua/plenary.nvim'
@@ -40,14 +39,7 @@ let g:ultisnips_python_quoting_style="double"
 
 " LSP
 let g:ale_disable_lsp = 1
-let g:coc_node_path = '~/.nvm/versions/node/v17.5.0/bin/node'
 let g:coc_disable_transparent_cursor = 1
-if $CONDA_PREFIX == ""
-  let s:current_python_path=$CONDA_PYTHON_EXE
-else
-  let s:current_python_path=$CONDA_PREFIX.'/bin/python'
-endif
-call coc#config('python', {'pythonPath': s:current_python_path})
 
 " Indenting
 set indentexpr="" " disable auto-inserting tabs
@@ -79,8 +71,8 @@ imap <C-\> <ESC>:NERDTreeToggle<CR>
 vmap <C-c> "+y
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>gd <Plug>(coc-definition)
-nmap ghp <Plug>(GitGutterPreviewHunk)
-nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghp <Plug>(coc-git-chunkinfo)
+nmap ghu :CocCommand git.chunkUndo<CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

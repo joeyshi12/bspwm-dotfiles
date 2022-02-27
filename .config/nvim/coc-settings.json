@@ -22,10 +22,7 @@
             }
         }
     },
-    "snippets.extends": {
-        "latex": ["tex", "texmath"]
-    },
-    "npm.binPath": "~/.nvm/versions/node/v17.5.0/bin/npm",
+    "python.pythonPath": "~/miniconda3/bin/python",
     "diagnostic.displayByAle": true,
     "coc.preferences.jumpCommand": "tabe"
 }
