@@ -3,12 +3,13 @@
 dir="~/.config/bspwm/rofi"
 
 # Options
+reload=" Reload"
 shutdown=" Shutdown"
 reboot=" Restart"
 lock=" Lock"
 suspend=" Sleep"
 logout="  Logout"
-options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+options="$reload\n$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
 # Confirmation
 confirm_exit() {
@@ -28,6 +29,9 @@ msg() {
 choice="$(echo -e "$options" | rofi -theme "$dir/powermenu.rasi" -p "Catppuccin" -dmenu -selected-row 0)"
 
 case $choice in
+    $reload)
+        bspc wm -r
+        ;;
     $shutdown)
         ans=$(confirm_exit &)
         if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then

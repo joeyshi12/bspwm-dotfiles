@@ -10,6 +10,6 @@ if [ ! -z $ssid ]; then
     nmcli dev wifi connect $ssid password $password
 fi
 
-if ! pgrep -x nmcli; then
+if ! pgrep -x nmcli > /dev/null; then
     echo "$(nmcli dev wifi list | sed 1,1d | cut -c 28-)" > "$HOME/.cache/networks"
 fi
