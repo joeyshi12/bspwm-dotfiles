@@ -4,7 +4,6 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 set -o vi
@@ -31,6 +30,26 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=2000
 export SAVEHIST=2000
 
+# Include local bin if exists
+if [ -d ~/.local/bin ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Alias definitions
+[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
+
+# Powerlevel10k config
+[ -f ~/.p10k.zsh ] && source ~/.p10k.zsh # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+
+# zsh suggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+# nvm
+source /usr/share/nvm/init-nvm.sh
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/joey/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -45,18 +64,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# set PATH so it includes user's private bin if it exists
-if [ -d ~/.local/bin ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# Alias definitions
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
-fi
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source /usr/share/nvm/init-nvm.sh
