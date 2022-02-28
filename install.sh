@@ -31,6 +31,7 @@ dotfiles=(
     ".xinitrc"
     ".Xresources"
     ".pylintrc"
+    ".sqliterc"
 )
 
 for file in "${dotfiles[@]}"; do
