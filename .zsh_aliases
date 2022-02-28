@@ -42,21 +42,23 @@ crun() {
 se() {
     local file=$(fzf --preview 'cat {}')
     if [ ! -z "$file" ]; then
-        case "$(file -b $file)" in
+        cd "$(dirname "$file")"
+        local file_name="$(basename "$file")"
+        case "$(file -b $file_name)" in
             *image*)
-                xdg-open "$file" &!
+                xdg-open "$file_name" &!
                 ;;
             PDF*)
-                zathura "$file" &!
+                zathura "$file_name" &!
                 ;;
             *(MP4|Matroska)*)
-                vlc "$file" &!
+                vlc "$file_name" &!
                 ;;
             SQLite*)
-                sqlite3 "$file"
+                sqlite3 "$file_name"
                 ;;
             *)
-                nvim "$file"
+                nvim "$file_name"
                 ;;
         esac
     fi
@@ -93,11 +95,11 @@ plomRun() {
             # TODO: Fix hacky code
             local work_dir="$HOME/Workspace"
             local id=$(docker ps | sed 1,1d | awk '{print $1}')
-            docker cp "$id:/exam" "$work_dir"
-            rm -rf -- "$work_dir/Plom_Demo*"
-            mv "$work_dir/exam/*" "$work_dir"
-            rm -rf "$work_dir/exam"
-            mv "$work_dir/Plom_Demo*" "$work_dir/Plom_Demo"
+            docker cp $id:/exam $work_dir
+            rm -rf -- $work_dir/Plom_Demo*
+            mv $work_dir/exam/* $work_dir
+            rm -rf $work_dir/exam
+            mv $work_dir/Plom_Demo* $work_dir/Plom_Demo
             ;;
         *)
             echo "Options: startContainer, resetStack"

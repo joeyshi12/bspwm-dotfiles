@@ -1,15 +1,16 @@
 #!/bin/bash
 
-dir="$HOME/.config/bspwm/rofi"
+DIR="$HOME/.config/bspwm/rofi"
+NETWORKS_CACHE="$HOME/.cache/networks"
 
-choice="$(cat ~/.cache/networks | rofi -dmenu -p "Networks" -theme $dir/wifi_menu.rasi)"
-ssid="$(echo $choice | awk '{print $1}')"
+choice="$(cat "$NETWORKS_CACHE" | rofi -dmenu -p "Networks" -theme $DIR/wifi_menu.rasi)"
+bssid="$(echo $choice | awk '{print $1}')"
 
-if [ ! -z "$ssid" ]; then
-    password="$(rofi -i -dmenu -password -no-fixed-num-lines -p "Password: " -theme $dir/input.rasi)"
-    [ -z "$password" ] || nmcli dev wifi connect $ssid password $password
+if [ ! -z "$bssid" ]; then
+    password="$(rofi -i -dmenu -password -no-fixed-num-lines -p "Password: " -theme $DIR/input.rasi)"
+    [ -z "$password" ] || nmcli dev wifi connect $bssid password $password
 fi
 
 if ! pgrep -x nmcli > /dev/null; then
-    echo "$(nmcli dev wifi list | sed 1,1d | cut -c 28-)" > "$HOME/.cache/networks"
+    nmcli dev wifi | grep -v "\*" | sed 1,1d | sed "s/^\s*[A-Z0-9:]*\s*//g" > "$NETWORKS_CACHE"
 fi
