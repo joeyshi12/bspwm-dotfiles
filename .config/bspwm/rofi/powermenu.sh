@@ -15,38 +15,31 @@ confirm_exit() {
     rofi -dmenu\
          -i\
          -no-fixed-num-lines\
-         -p "Are You Sure? : "\
-         -theme $dir/input.rasi
+         -p "Are you sure? [Y/n]: "\
+         -theme "$dir/input.rasi"
 }
 
 # Message
 msg() {
     rofi -theme "$dir/message.rasi"\
-         -e "Available Options  -  y / n"
+         -e "Available options  -  Y/n"
 }
 
 choice="$(echo -e "$options" | rofi -theme "$dir/powermenu.rasi" -p "Catppuccin" -dmenu -selected-row 0)"
-
-case $choice in
+case "$choice" in
     $shutdown)
-        ans=$(confirm_exit &)
-        if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-            systemctl poweroff
-        elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
-            exit 0
-        else
-            msg
-        fi
+        case "$(confirm_exit &)" in
+            y|Y) systemctl poweroff;;
+            n|N) exit 0;;
+            *) msg;;
+        esac
         ;;
     $reboot)
-        ans=$(confirm_exit &)
-        if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-            systemctl reboot
-        elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
-            exit 0
-        else
-            msg
-        fi
+        case "$(confirm_exit &)" in
+            y|Y) systemctl reboot;;
+            n|N) exit 0;;
+            *) msg;;
+        esac
         ;;
     $lock)
         if [[ -f /usr/bin/betterlockscreen ]]; then
@@ -56,25 +49,25 @@ case $choice in
         fi
         ;;
     $suspend)
-        ans=$(confirm_exit &)
-        if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-            mpc -q pause
-            amixer set Master mute
-            systemctl suspend
-        elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
-            exit 0
-        else
-            msg
-        fi
+        case "$(confirm_exit &)" in
+            y|Y)
+                mpc -q pause
+                amixer set Master mute
+                systemctl suspend
+                ;;
+            n|N)
+                exit 0
+                ;;
+            *)
+                msg
+                ;;
+        esac
         ;;
     $logout)
-        ans=$(confirm_exit &)
-        if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-            bspc quit
-        elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
-            exit 0
-        else
-            msg
-        fi
+        case "$(confirm_exit &)" in
+            y|Y) bspc quit;;
+            n|N) exit 0;;
+            *) msg;;
+        esac
         ;;
 esac
