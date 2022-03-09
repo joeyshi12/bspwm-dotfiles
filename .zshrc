@@ -10,7 +10,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
+compinit -d "$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
 _comp_options+=(globdots) # Include hidden files.
 
 # Vim-like key-bindings
