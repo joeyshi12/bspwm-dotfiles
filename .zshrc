@@ -6,11 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-set -o vi
-bindkey -v '^?' backward-delete-char
-export VISUAL=nvim
-export EDITOR="$VISUAL"
-
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -18,23 +13,16 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Include hidden files.
 
-# Use vim keys in tab complete menu:
+# Vim-like key-bindings
+set -o vi
+bindkey -v '^?' backward-delete-char
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
-# Command history
-export HISTSIZE=2000
-export SAVEHIST=2000
-export HISTFILE=~/.zhistory
-
-# Include local bin if exists
-if [ -d ~/.local/bin ]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
+# Plugins
+[ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
 [ -f ~/.p10k.zsh ] && source ~/.p10k.zsh # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

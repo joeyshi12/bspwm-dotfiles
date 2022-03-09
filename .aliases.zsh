@@ -26,7 +26,10 @@ alias gco='git checkout'
 alias gst='git status'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gds='git diff --staged'
 alias glg='git log --graph'
+alias gr='git remote'
+alias gra='git remote add'
 
 alias t='tmux'
 alias ta='tmux attach-session'
@@ -41,8 +44,8 @@ crun() {
 
 # Runs fzf and opens chosen file in nvim
 se() {
-    local file=$(fzf --preview 'cat {}')
-    if [ ! -z "$file" ]; then
+    local file=$(fzf --preview 'echo {}')
+    if [ -f "$file" ]; then
         cd "$(dirname "$file")"
         local file_name="$(basename "$file")"
         case "$(file -b $file_name)" in
@@ -81,29 +84,4 @@ tarzip() {
     else
         echo Error: cannot find directory at $1
     fi
-}
-
-# Executes commands for setting up a plom server
-# $1 plomRun option
-plomRun() {
-    case $1 in
-        startContainer)
-            sudo docker run -it --rm \
-                -p 41985:41984 plomgrading/server bash \
-                -c "PLOM_NO_SSL_VERIFY=1 plom-demo"
-            ;;
-        resetStack)
-            # TODO: Fix hacky code
-            local work_dir="$HOME/Workspace"
-            local id=$(docker ps | sed 1,1d | awk '{print $1}')
-            docker cp $id:/exam $work_dir
-            rm -rf -- $work_dir/Plom_Demo*
-            mv $work_dir/exam/* $work_dir
-            rm -rf $work_dir/exam
-            mv $work_dir/Plom_Demo* $work_dir/Plom_Demo
-            ;;
-        *)
-            echo "Options: startContainer, resetStack"
-            ;;
-    esac
 }
