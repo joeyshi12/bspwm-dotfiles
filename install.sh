@@ -26,6 +26,7 @@ dotfiles=(
     ".config/ranger"
     ".config/betterlockscreenrc"
     ".config/tmux"
+    ".config/conda"
     ".zprofile"
     ".zshrc"
     ".aliases.zsh"

@@ -12,6 +12,7 @@ alias pacss='pacman -Ss'
 alias pacqs='pacman -Qs'
 alias pacsyu='sudo pacman -Syu'
 alias pacrs='sudo pacman -Rs'
+alias pacar='sudo pacman -Rsn $(pacman -Qdtq)'
 
 alias ga='git add'
 alias gaa='git add --all'

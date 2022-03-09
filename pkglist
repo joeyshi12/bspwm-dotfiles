@@ -1,5 +1,4 @@
 alacritty
-atom
 autoconf
 automake
 base
@@ -27,6 +26,7 @@ gdb
 gimp
 git
 github-cli
+gnome-keyring
 groff
 grub
 gvfs
@@ -38,6 +38,7 @@ jre11-openjdk
 jre11-openjdk-headless
 jupyter-notebook
 lib32-fontconfig
+libgnome-keyring
 libreoffice-still
 libtool
 lightdm
@@ -58,6 +59,7 @@ networkmanager
 nm-connection-editor
 noto-fonts
 noto-fonts-emoji
+npm
 nvidia
 obs-studio
 obsidian
@@ -74,6 +76,7 @@ python-pynvim
 qtcreator
 ranger
 rofi
+rsync
 simplescreenrecorder
 steam
 strace
