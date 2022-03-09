@@ -45,7 +45,7 @@ crun() {
 
 # Runs fzf and opens chosen file in nvim
 se() {
-    local file=$(fzf --preview 'echo {}')
+    local file=$(fzf --preview 'cat {}')
     if [ -f "$file" ]; then
         cd "$(dirname "$file")"
         local file_name="$(basename "$file")"
