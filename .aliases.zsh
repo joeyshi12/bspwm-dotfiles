@@ -49,18 +49,18 @@ se() {
     if [ -f "$file" ]; then
         cd "$(dirname "$file")"
         local file_name="$(basename "$file")"
-        case "$(file -b $file_name)" in
-            *image*)
-                xdg-open "$file_name" &!
-                ;;
-            PDF*)
+        case "$(file -b --mime-type $file_name)" in
+            application/pdf)
                 zathura "$file_name" &!
                 ;;
-            *(MP4|Matroska)*)
-                vlc "$file_name" &!
-                ;;
-            SQLite*)
+            application/vnd.sqlite3)
                 sqlite3 "$file_name"
+                ;;
+            image/*)
+                xdg-open "$file_name" &!
+                ;;
+            video/*)
+                vlc "$file_name" &!
                 ;;
             *)
                 nvim "$file_name"
@@ -83,6 +83,6 @@ tarzip() {
         local file_name="$(basename $1).tar.gz"
         tar -czvf $file_name $1
     else
-        echo Error: cannot find directory at $1
+        echo "Error: cannot find directory at $1"
     fi
 }
