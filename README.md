@@ -18,7 +18,7 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 
 ## Rice info
 - **Window Manager**: bspwm
-- **Display Manager: lightdm
+- **Display Manager**: lightdm
 - **Task Bar**: polybar
 - **Launcher**: rofi
 - **Compositor**: picom (requires a version with rounded corner support)
@@ -71,7 +71,7 @@ EndSection
 - View available monitors and resolutions by running `xrandr`
 
 ## Network settings
-- Packages: `NetworkManager` (check to make sure this is installed)
+- Packages: `networkmanager` (check to make sure this is installed)
 - Run `nmcli dev wifi` to scan for networks
 - Run `nmtui` to open user interface for connecting to networks
 
