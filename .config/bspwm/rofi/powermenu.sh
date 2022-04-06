@@ -50,17 +50,9 @@ case "$choice" in
         ;;
     $suspend)
         case "$(confirm_exit &)" in
-            y|Y)
-                mpc -q pause
-                amixer set Master mute
-                systemctl suspend
-                ;;
-            n|N)
-                exit 0
-                ;;
-            *)
-                msg
-                ;;
+            y|Y) systemctl suspend;;
+            n|N) exit 0;;
+            *) msg;;
         esac
         ;;
     $logout)
