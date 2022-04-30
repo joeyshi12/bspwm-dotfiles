@@ -58,7 +58,7 @@ se() {
                 sqlite3 "$file_name"
                 ;;
             image/*)
-                xdg-open "$file_name" &!
+                feh "$file_name" &!
                 ;;
             video/*)
                 vlc "$file_name" &!
