@@ -4,6 +4,7 @@ automake
 base
 binutils
 bison
+blender
 bluez
 bluez-utils
 bspwm
@@ -12,6 +13,7 @@ cmake
 cmatrix
 discord
 docker
+dolphin-emu
 dotnet-sdk
 dunst
 fakeroot
@@ -25,10 +27,13 @@ gcc
 gdb
 gimp
 git
+glfw-x11
 gnome-keyring
+gnu-netcat
 groff
 grub
 gvfs
+gvim
 htop
 imagemagick
 inkscape
@@ -50,6 +55,7 @@ linux-lts-headers
 lxappearance
 m4
 make
+man-pages
 neofetch
 neomutt
 neovim
@@ -61,10 +67,13 @@ npm
 nvidia
 obs-studio
 obsidian
+opengl-man-pages
 p7zip
 patch
 pavucontrol
+perl-image-exiftool
 pkgconf
+pkgfile
 pulseaudio-alsa
 pulseaudio-bluetooth
 pulsemixer
