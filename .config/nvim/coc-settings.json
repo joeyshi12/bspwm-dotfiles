@@ -23,6 +23,5 @@
         }
     },
     "python.pythonPath": "~/miniconda3/bin/python",
-    "diagnostic.displayByAle": true,
-    "coc.preferences.jumpCommand": "tabe"
+    "diagnostic.displayByAle": true
 }
