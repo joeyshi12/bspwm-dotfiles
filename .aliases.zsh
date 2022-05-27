@@ -41,7 +41,7 @@ alias tk='tmux kill-session'
 # Compiles and executes C file and removes binary
 # $1 path to the C file
 crun() {
-    gcc $1 && ./a.out && rm a.out
+    gcc "$1" && ./a.out "${@:2}" && rm a.out
 }
 
 # Runs fzf and opens chosen file in nvim

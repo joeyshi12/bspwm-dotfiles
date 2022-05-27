@@ -16,6 +16,8 @@ export SSB_HOME="${XDG_DATA_HOME}/zoom"
 export WINEPREFIX="${XDG_DATA_HOME}/wineprefixes/default"
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
+export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
+export JUPYTER_CONFIG_DIR="${XDG_CONFIG_HOME}/jupyter"
 
 if [ -d ~/.local/bin ]; then
     PATH="${HOME}/.local/bin:${PATH}"
