@@ -7,6 +7,7 @@ alias sql='sqlite3 -init ~/.config/sqlite3/sqliterc'
 alias sc='sc-im'
 alias copy='xclip -sel c'
 alias diff='diff --color'
+[[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
 
 alias pacs='sudo pacman -S'
 alias pacss='pacman -Ss'

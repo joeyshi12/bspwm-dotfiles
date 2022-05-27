@@ -28,6 +28,7 @@ dotfiles=(
     ".config/sqlite3"
     ".config/conda"
     ".config/pylintrc"
+    ".config/ripgrep"
     ".zprofile"
     ".zshrc"
     ".xinitrc"
