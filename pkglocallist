@@ -4,6 +4,8 @@ betterlockscreen
 bluetooth-autoconnect
 brave-bin
 catppuccin-gtk-theme
+cmatrix-git
+heroku-cli-bin
 i3lock-color
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
@@ -11,11 +13,11 @@ lightdm-mini-greeter
 nvm
 pandoc-bin
 picom-ibhagwan-git
-polybar
 postman-bin
 pycharm-professional
 rar
 sc-im-git
+slack-desktop
 visual-studio-code-bin
 yay-bin
 zoom

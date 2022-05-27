@@ -15,8 +15,8 @@ done
 
 # Create links
 dotfiles=(
-    ".config/alacritty"
     ".config/bspwm"
+    ".config/kitty"
     ".config/picom"
     ".config/cava"
     ".config/gtk-2.0"
