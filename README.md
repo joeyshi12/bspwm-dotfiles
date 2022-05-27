@@ -21,7 +21,8 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 - **Task Bar**: polybar
 - **Launcher**: rofi
 - **Compositor**: picom (https://aur.archlinux.org/packages/picom-rounded-corners)
-- **Terminal**: alacritty
+- **Terminal**: kitty
+- **Shell**: zsh
 - **File Manager**: thunar
     - `gvfs` required for usb devices
     - `xarchiver` required for creating and extracting zip files
