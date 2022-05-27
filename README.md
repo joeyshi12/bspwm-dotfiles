@@ -16,6 +16,7 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 |![snapshot_2](assets/snapshot_2.png)|![snapshot_3](assets/snapshot_3.png)|
 
 ## Rice info
+- **Operating System**: Arch Linux
 - **Window Manager**: bspwm
 - **Display Manager**: lightdm
 - **Task Bar**: polybar
