@@ -40,9 +40,6 @@ let g:ultisnips_python_quoting_style="double"
 " LSP
 let g:coc_disable_transparent_cursor = 1
 let g:ale_disable_lsp = 1
-let g:ale_linters = {
-    \ 'sh': ['language_server'],
-    \ }
 
 " Indenting
 set indentexpr="" " disable auto-inserting tabs
