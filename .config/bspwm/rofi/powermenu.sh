@@ -27,35 +27,35 @@ msg() {
 
 choice="$(echo -e "${OPTIONS}" | rofi -theme "${ROFI}/powermenu.rasi" -p "Catppuccin" -dmenu -selected-row 0)"
 case "${choice}" in
-    ${shutdown})
+    ${SHUTDOWN})
         case "$(confirm_exit &)" in
             y|Y) systemctl poweroff;;
             n|N) exit 0;;
             *) msg;;
         esac
         ;;
-    ${reboot})
+    ${REBOOT})
         case "$(confirm_exit &)" in
             y|Y) systemctl reboot;;
             n|N) exit 0;;
             *) msg;;
         esac
         ;;
-    ${lock})
+    ${LOCK})
         if [[ -f /usr/bin/betterlockscreen ]]; then
             betterlockscreen -l blur
         elif [[ -f /usr/bin/i3lock ]]; then
             i3lock
         fi
         ;;
-    ${suspend})
+    ${SUSPEND})
         case "$(confirm_exit &)" in
             y|Y) systemctl suspend;;
             n|N) exit 0;;
             *) msg;;
         esac
         ;;
-    ${logout})
+    ${LOGOUT})
         case "$(confirm_exit &)" in
             y|Y) bspc quit;;
             n|N) exit 0;;
