@@ -17,7 +17,7 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Zathura state=tiled
 #bspc rule -a Thunar state=floating
 bspc rule -a zoom state=floating
-bspc rule -a Thunderbird desktop='^3' follow=on
+bspc rule -a Thunderbird desktop='^6' follow=on
 
 killall -q polybar sxhkd dunst
 wmname LG3D # Fixes problems with JDK versions assuming a reparenting window manager
