@@ -5,11 +5,11 @@ left_target=$1
 right_target=$(($1 + 3))
 focused_desktop=$(bspc query -D -d focused --names)
 
-if [[ $focused_desktop -gt 3 ]]; then
-    bspc desktop -f ^$left_target
-    bspc desktop -f ^$right_target
+if [[ "${focused_desktop}" -gt 3 ]]; then
+    bspc desktop -f "^${left_target}"
+    bspc desktop -f "^${right_target}"
 else
-    bspc desktop -f ^$right_target
-    bspc desktop -f ^$left_target
+    bspc desktop -f "^${right_target}"
+    bspc desktop -f "^${left_target}"
 fi
 

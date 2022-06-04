@@ -1,20 +1,7 @@
 #!/bin/bash
 
-DOTFILES_DIR=~/.dotfiles
-
-# Install themes, fonts, icons
-for asset_type in themes fonts icons; do
-    archive_dir=$DOTFILES_DIR/assets/$asset_type
-    local_asset_dir=$HOME/.local/share/$asset_type
-
-    [ -d "$local_asset_dir" ] || mkdir -p "$local_asset_dir"
-    for archive in $(ls $archive_dir); do
-        tar -xf "$archive_dir/$archive" -C "$local_asset_dir"
-    done
-done
-
-# Create links
-dotfiles=(
+DOTFILES_DIR="${HOME}/.dotfiles"
+DOTFILES=(
     ".config/bspwm"
     ".config/kitty"
     ".config/picom"
@@ -29,11 +16,25 @@ dotfiles=(
     ".config/conda"
     ".config/pylintrc"
     ".config/ripgrep"
+    ".config/coc/extensions/package.json"
     ".zprofile"
     ".zshrc"
     ".xinitrc"
 )
 
-for file in "${dotfiles[@]}"; do
-    ln -sfn "${DOTFILES_DIR}/${file}" "${HOME}/$file"
+# Install themes, fonts, icons
+for asset_type in themes fonts icons; do
+    archive_dir="${DOTFILES_DIR}/assets/${asset_type}"
+    local_asset_dir="${HOME}/.local/share/${asset_type}"
+
+    mkdir -p ${local_asset_dir}
+    for archive in $(ls "${archive_dir}"); do
+        tar -xf "${archive_dir}/${archive}" -C "${local_asset_dir}"
+    done
+done
+
+# Create links
+for file in "${DOTFILES[@]}"; do
+    mkdir -p $(dirname "${HOME}/${file}")
+    ln -sfn "${DOTFILES_DIR}/${file}" "${HOME}/${file}"
 done

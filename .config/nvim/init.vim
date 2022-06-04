@@ -38,8 +38,11 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:ultisnips_python_quoting_style="double"
 
 " LSP
-let g:ale_disable_lsp = 1
 let g:coc_disable_transparent_cursor = 1
+let g:ale_disable_lsp = 1
+let g:ale_linters = {
+    \ 'sh': ['language_server'],
+    \ }
 
 " Indenting
 set indentexpr="" " disable auto-inserting tabs
@@ -73,6 +76,9 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>gd <Plug>(coc-definition)
 nmap ghp <Plug>(coc-git-chunkinfo)
 nmap ghu :CocCommand git.chunkUndo<CR>
+
+inoremap <nowait><expr> <C-d> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <C-u> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
 " https://vi.stackexchange.com/questions/343/how-to-edit-binary-files-with-vim
 nmap <Leader>hr :%!xxd<CR> :set filetype=xxd<CR>
