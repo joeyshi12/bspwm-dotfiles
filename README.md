@@ -3,6 +3,7 @@
 Personal configuration files for running a stylish Arch Linux desktop environment
 
 ## Table of contents
+
 - [Rice info](#rice-info)
 - [Installation](#installation)
 - [Window management tips](#window-management-tips)
@@ -16,6 +17,7 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
 |![snapshot_2](assets/snapshot_2.png)|![snapshot_3](assets/snapshot_3.png)|
 
 ## Rice info
+
 - **Operating System**: Arch Linux
 - **Window Manager**: bspwm
 - **Display Manager**: lightdm
@@ -32,11 +34,11 @@ Personal configuration files for running a stylish Arch Linux desktop environmen
     - Regenerate lockscreen images with `betterlockscreen -u <path-to-image>`
 
 ## Installation
+
 1. Clone repo into hidden directory
 ```bash
 git clone git@github.com:joeyshi12/dotfiles ~/.dotfiles
 ```
-
 2. Move themes, fonts, icons into local data folder and create symlinks
     - Configure assets with `lxappearance`
     - Terminal fonts: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro
@@ -44,12 +46,10 @@ git clone git@github.com:joeyshi12/dotfiles ~/.dotfiles
 ```bash
 ~/.dotfiles/bootstrap.sh
 ```
-
 3. Install native packages
 ```bash
 pacman -S $(cat ~/.dotfiles/pkglist)
 ```
-
 4. Install yay
 ```bash
 cd /opt
@@ -58,13 +58,13 @@ sudo git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
-
 5. Install foreign packages
 ```bash
 yay -S $(cat ~/.dotfiles/pkglocallist)
 ```
 
 ## Window management tips
+
 - Focus desktop: `super + {1-6}`
 - Focus desktop on both monitors: `super + alt + {1-3}`
 - Close focused window: `super + w`
@@ -73,7 +73,8 @@ yay -S $(cat ~/.dotfiles/pkglocallist)
 *Hotkey bindings configured in `.config/bspwm/sxhkd/sxhkdrc`*
 
 ## Monitor settings
-- Monitor orientation and resolution settings can be configured in `/etc/X11/xorg.conf.d/52-resolution-fix.conf`
+
+Monitor orientation and resolution settings can be configured in `/etc/X11/xorg.conf.d/52-resolution-fix.conf`
 ```
 Section "Monitor"
     Identifier "HDMI-0"
@@ -90,17 +91,34 @@ EndSection
 - View available monitors and resolutions by running `xrandr`
 
 ## Network settings
+
 - Run `nmcli dev wifi` to scan for networks
 - Run `nmtui` to open user interface for connecting to networks
 
 ## Bluetooth settings
-- Enable bluetooth service `systemctl enable --now bluetooth.service`
-- Power on bluetooth adapter on start:
-    - Add `AutoEnable=true` under the `[Policy]` section of `/etc/bluetooth/main.conf`
-- Scan for bluetooth devices with `bluetoothctl scan on` and connect using `bluetoothctl connect <device-address>`
+
+1. Enable bluetooth services if not done so already
+```bash
+systemctl enable --now bluetooth
+```
+2. Automatically power on bluetooth adapter on boot by adding the following to `/etc/bluetooth/main.conf`:
+```
+[Policy]
+AutoEnable=true
+```
+3. Scan for bluetooth devices and connect
+```bash
+bluetoothctl scan on &
+bluetoothctl connect <dev>
+```
 
 ## Audio settings
-- Pavucontrol is a gui audio mixer
-- bluetooth-autoconnect is a script for connecting to trusted devices automatically
-    - Run `bluetooth-autoconnect` to connect devices
-    - `systemctl enable --now bluetooth-autoconnect` to run autoconnect command on start-up
+
+- Audio mixer: `pulsemixer`
+- Sound server controller: `pactl`
+- Terms: Output = Sink, Input = Source
+
+**Manage Sound Devices**
+- Find current sink/source with `pactl get-default-(sink|source)`
+- List all avail sinks/sources with `pactl list (sinks|sources)`
+- Set sink/source with `pactl set-default-(sink-source)`

@@ -1,6 +1,7 @@
 autoconf
 automake
 base
+bash-language-server
 binutils
 bison
 blender
@@ -25,9 +26,10 @@ font-manager
 fzf
 gcc
 gdb
-gimp
+gifsicle
 git
 git-lfs
+github-cli
 glfw-x11
 gnome-keyring
 gnu-netcat
@@ -57,11 +59,10 @@ linux-firmware
 linux-lts
 linux-lts-headers
 lxappearance
-lzip
-lzop
 m4
 make
 man-pages
+nasm
 neofetch
 neomutt
 neovim
@@ -75,7 +76,6 @@ obs-studio
 obsidian
 opengl-man-pages
 p7zip
-paraview
 patch
 pavucontrol
 perl-image-exiftool
@@ -88,6 +88,7 @@ pulseaudio-bluetooth
 pulsemixer
 python-distutils-extra
 python-pip
+python-poetry
 python-pynvim
 python-sphinx_rtd_theme
 qtcreator
@@ -191,10 +192,10 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xournalpp
 yarn
 zathura
 zathura-pdf-poppler
-zbar
 zip
 zsh
 zsh-autosuggestions
