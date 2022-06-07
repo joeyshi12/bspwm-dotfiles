@@ -126,5 +126,5 @@ bluetoothctl connect <dev>
 **Manage Sound Devices**
 
 - Find current sink/source with `pactl get-default-(sink|source)`
-- List all avail sinks/sources with `pactl list (sinks|sources)`
+- List all available sinks/sources with `pactl list (sinks|sources)`
 - Set sink/source with `pactl set-default-(sink-source)`
