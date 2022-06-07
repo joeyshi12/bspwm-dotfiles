@@ -31,6 +31,10 @@ feh --bg-fill "${HOME}/.dotfiles/assets/wallpapers/lavender-cat.png" &
 xset s 3600 # blank screen when inactive for 1 hour
 xset -dpms
 
+# Map menu key to mod3
+xmodmap -e "keycode 135 = Hyper_R"
+xmodmap -e "add mod3 = Hyper_R"
+
 # Restore cursor theme
 xsetroot -cursor_name left_ptr &
 
