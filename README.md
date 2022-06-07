@@ -71,7 +71,7 @@ yay -S $(cat ~/.dotfiles/pkglocallist)
 - Focus window: `super + {h,j,k,l}`
 - Swap focused window: `super + shift + {h,j,k,l}`
 
-* Hotkey bindings configured in `.config/bspwm/sxhkd/sxhkdrc`*
+*Hotkey bindings configured in `.config/bspwm/sxhkd/sxhkdrc`*
 
 ## Monitor settings
 
