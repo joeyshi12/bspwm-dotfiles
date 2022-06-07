@@ -70,11 +70,13 @@ yay -S $(cat ~/.dotfiles/pkglocallist)
 - Close focused window: `super + w`
 - Focus window: `super + {h,j,k,l}`
 - Swap focused window: `super + shift + {h,j,k,l}`
-*Hotkey bindings configured in `.config/bspwm/sxhkd/sxhkdrc`*
+
+* Hotkey bindings configured in `.config/bspwm/sxhkd/sxhkdrc`*
 
 ## Monitor settings
 
-Monitor orientation and resolution settings can be configured in `/etc/X11/xorg.conf.d/52-resolution-fix.conf`
+- Look up resolutions of available monitors with `xrandr`
+- Monitor orientation and resolution settings can be configured in `/etc/X11/xorg.conf.d/52-resolution-fix.conf`:
 ```
 Section "Monitor"
     Identifier "HDMI-0"
@@ -87,8 +89,11 @@ Section "Monitor"
     Option "RightOf" "HDMI-0"
 EndSection
 ```
-- Workspace allocation across monitors is configured in `~/.config/bspwm/bspwmrc`
-- View available monitors and resolutions by running `xrandr`
+- Workspace allocation across monitors is configured in `~/.config/bspwm/bspwmrc`:
+```bash
+bspc monitor HDMI-0 -d 1 2 3
+bspc monitor DVI-I-1 -d 4 5 6
+```
 
 ## Network settings
 
@@ -119,6 +124,7 @@ bluetoothctl connect <dev>
 - Terms: Output = Sink, Input = Source
 
 **Manage Sound Devices**
+
 - Find current sink/source with `pactl get-default-(sink|source)`
 - List all avail sinks/sources with `pactl list (sinks|sources)`
 - Set sink/source with `pactl set-default-(sink-source)`
