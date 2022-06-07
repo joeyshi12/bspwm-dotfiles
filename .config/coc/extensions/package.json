@@ -4,6 +4,7 @@
     "coc-json": ">=1.4.1",
     "coc-python": ">=1.2.13",
     "coc-sh": ">=0.6.1",
+    "coc-texlab": ">=3.2.0",
     "coc-tsserver": ">=1.9.13"
   }
 }
