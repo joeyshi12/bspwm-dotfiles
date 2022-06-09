@@ -45,32 +45,6 @@ crun() {
     gcc "$1" && ./a.out "${@:2}" && rm a.out
 }
 
-# Runs fzf and opens chosen file in nvim
-se() {
-    local file=$(fzf --preview 'cat {}')
-    if [ -f "$file" ]; then
-        cd "$(dirname "$file")"
-        local file_name="$(basename "$file")"
-        case "$(file -b --mime-type $file_name)" in
-            application/pdf)
-                zathura "$file_name" &!
-                ;;
-            application/vnd.sqlite3)
-                sqlite3 "$file_name"
-                ;;
-            image/*)
-                feh "$file_name" &!
-                ;;
-            video/*)
-                vlc "$file_name" &!
-                ;;
-            *)
-                nvim "$file_name"
-                ;;
-        esac
-    fi
-}
-
 # Runs ranger and directs user to current ranger directory on quit
 r() {
     local target=~/.cache/ranger/rangerdir
