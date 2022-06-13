@@ -123,4 +123,5 @@ element selected {
     border:                 0px 0px 0px 0px;
     border-radius:          0px;
     border-color:           @ac;
+    border-radius:          5px;
 }

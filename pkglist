@@ -59,6 +59,7 @@ linux
 linux-firmware
 linux-lts
 linux-lts-headers
+lutris
 lxappearance
 m4
 make
@@ -122,6 +123,7 @@ thunar
 thunar-archive-plugin
 thunar-volman
 thunderbird
+tldr
 tmux
 tree
 ttf-dejavu

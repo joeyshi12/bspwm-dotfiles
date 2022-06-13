@@ -1,8 +1,11 @@
 configuration {
+    modi:                   "run,drun,window";
     font:                   "SauceCodePro Nerd Font 12";
     show-icons:             true;
-    icon-theme:             "Papirus";
-    display-drun:           "";
+    icon-theme:             "SauceCodePro Nerd Font Mono";
+    display-drun:           " App ";
+    display-run:            " Run ";
+    display-window:         " Window ";
     drun-display-format:    "{name}";
     disable-history:        false;
     fullscreen:             false;
@@ -13,7 +16,6 @@ configuration {
 @import "colors.rasi"
 
 window {
-    transparency:           "real";
     background-color:       @bga;
     text-color:             @fg;
     border:                 0px 0px 0px 0px;
@@ -26,11 +28,10 @@ window {
 }
 
 prompt {
-    enabled:                true;
-    padding:                0px;
-    background-color:       @bga;
-    text-color:             @ac;
-    font:                   "feather 12";
+    padding:                6px;
+    text-color:             @bg;
+    background-color:       @se;
+    border-radius:          5px;
 }
 
 entry {
@@ -40,8 +41,9 @@ entry {
     expand:                 true;
     horizontal-align:       0;
     placeholder:            "Search...";
-    padding:                0px 0px 0px 5px;
+    padding:                6px;
     blink:                  true;
+    margin:                 0px 0px 0px 10px;
 }
 
 inputbar {
@@ -58,7 +60,7 @@ inputbar {
 
 listview {
     background-color:       @al;
-    padding:                0px;
+    padding:                10px;
     columns:                2;
     lines:                  6;
     spacing:                5px;
@@ -113,6 +115,6 @@ element selected {
     background-color:       @se;
     text-color:             @bg;
     border:                 0px 0px 0px 0px;
-    border-radius:          0px;
+    border-radius:          5px;
     border-color:           @ac;
 }
