@@ -16,6 +16,7 @@ DOTFILES=(
     ".config/conda"
     ".config/pylintrc"
     ".config/ripgrep"
+    ".config/zathura"
     ".config/coc/extensions/package.json"
     ".zprofile"
     ".zshrc"

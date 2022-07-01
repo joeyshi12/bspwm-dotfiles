@@ -1,11 +1,12 @@
 configuration {
-    modi:                   "drun,window";
+    modi:                   "drun,window,filebrowser,calc";
     font:                   "SauceCodePro Nerd Font 12";
     show-icons:             true;
-    icon-theme:             "SauceCodePro Nerd Font Mono";
     display-drun:           " App ";
     display-run:            " Run ";
     display-window:         " Window ";
+    display-filebrowser:    " File ";
+    display-calc:           " Calculator ";
     drun-display-format:    "{name}";
     disable-history:        false;
     fullscreen:             false;
@@ -21,7 +22,7 @@ window {
     border:                 0px 0px 0px 0px;
     border-color:           @bga;
     border-radius:          0px;
-    width:                  600px;
+    width:                  700px;
     location:               center;
     x-offset:               0;
     y-offset:               0;

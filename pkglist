@@ -7,6 +7,7 @@ binutils
 bison
 blender
 bluez
+bluez-plugins
 bluez-utils
 bspwm
 ccls
@@ -28,6 +29,7 @@ fzf
 gcc
 gdb
 gifsicle
+gimp
 git
 git-lfs
 github-cli
@@ -48,6 +50,10 @@ jre11-openjdk-headless
 jupyter-notebook
 kitty
 lib32-fontconfig
+lib32-gnutls
+lib32-libpulse
+lib32-openal
+libc++
 libgnome-keyring
 libreoffice-still
 libtool
@@ -97,7 +103,9 @@ racket
 ranger
 ripgrep
 rofi
+rofi-calc
 rsync
+rust
 sharutils
 simplescreenrecorder
 socat
@@ -195,7 +203,6 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xournalpp
 yarn
 zathura
 zathura-pdf-poppler

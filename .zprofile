@@ -22,3 +22,7 @@ export JUPYTER_CONFIG_DIR="${XDG_CONFIG_HOME}/jupyter"
 if [ -d ~/.local/bin ]; then
     PATH="${HOME}/.local/bin:${PATH}"
 fi
+
+if [ -d ~/.dotfiles/bin ]; then
+    PATH="${HOME}/.dotfiles/bin:${PATH}"
+fi
