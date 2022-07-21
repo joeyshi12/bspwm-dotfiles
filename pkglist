@@ -13,7 +13,6 @@ bspwm
 ccls
 cmake
 cowsay
-cpio
 discord
 docker
 dolphin-emu
@@ -32,7 +31,6 @@ gifsicle
 gimp
 git
 git-lfs
-github-cli
 glfw-x11
 gnome-keyring
 gnu-netcat
@@ -70,6 +68,7 @@ lxappearance
 m4
 make
 man-pages
+musescore
 nasm
 neofetch
 neomutt
@@ -84,6 +83,7 @@ obs-studio
 obsidian
 opengl-man-pages
 p7zip
+paraview
 patch
 perl-image-exiftool
 pkgconf
@@ -101,6 +101,7 @@ python-sphinx_rtd_theme
 qtcreator
 racket
 ranger
+reaper
 ripgrep
 rofi
 rofi-calc

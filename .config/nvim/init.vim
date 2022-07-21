@@ -9,6 +9,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'godlygeek/tabular'
 Plug 'lervag/vimtex', {'tag': 'v1.6'}
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
@@ -57,6 +58,7 @@ let g:lightline = {'colorscheme': 'catppuccin'}
 
 " LaTeX
 let g:tex_flavor = 'latex'
+let g:vimtex_quickfix_enabled = 0
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_compiler_latexmk = {'build_dir': 'build'}
@@ -64,22 +66,28 @@ set conceallevel=2
 let g:tex_conceal = 'abdmg'
 
 " Mappings
-nmap <C-n> :tabn<CR>
-nmap <C-p> :tabp<CR>
-nmap <C-\> :NERDTreeToggle<CR>
-imap <C-\> <ESC>:NERDTreeToggle<CR>
-vmap <C-c> "+y
-nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>gd <Plug>(coc-definition)
-nmap ghp <Plug>(coc-git-chunkinfo)
-nmap ghu :CocCommand git.chunkUndo<CR>
+nnoremap <C-n> :tabn<cr>
+nnoremap <C-p> :tabp<cr>
+nnoremap <C-\> :NERDTreeToggle<cr>
+inoremap <C-\> <ESC>:NERDTreeToggle<cr>
+vnoremap <C-c> "+y
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ev :edit $MYVIMRC<cr>
+nnoremap <leader>ec <Plug>(coc-config)
+nnoremap <leader>ft :TableFormat<cr>
+nnoremap <leader>fj :%!python -m json.tool<cr>
+
+nnoremap <leader>rn <Plug>(coc-rename)
+nnoremap <leader>gd <Plug>(coc-definition)
+nnoremap ghp <Plug>(coc-git-chunkinfo)
+nnoremap ghu :CocCommand git.chunkUndo<cr>
 
 inoremap <nowait><expr> <C-d> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
 inoremap <nowait><expr> <C-u> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
 " https://vi.stackexchange.com/questions/343/how-to-edit-binary-files-with-vim
-nmap <Leader>hr :%!xxd<CR> :set filetype=xxd<CR>
-nmap <Leader>hw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
+"nmap <Leader>hr :%!xxd<CR> :set filetype=xxd<CR>
+"nmap <Leader>hw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
