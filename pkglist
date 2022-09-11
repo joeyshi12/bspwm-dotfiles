@@ -61,6 +61,7 @@ lightdm-gtk-greeter
 lightdm-webkit2-greeter
 linux
 linux-firmware
+linux-firmware-qlogic
 linux-lts
 linux-lts-headers
 lutris
@@ -204,6 +205,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xournalpp
 yarn
 zathura
 zathura-pdf-poppler

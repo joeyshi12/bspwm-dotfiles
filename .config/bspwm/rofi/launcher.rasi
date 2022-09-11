@@ -1,5 +1,5 @@
 configuration {
-    modi:                   "drun,window,filebrowser,calc";
+    modi:                   "drun,window,filebrowser";
     font:                   "SauceCodePro Nerd Font 12";
     show-icons:             true;
     display-drun:           " App ";

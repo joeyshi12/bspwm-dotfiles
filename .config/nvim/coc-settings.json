@@ -34,6 +34,6 @@
             }
         }
     },
-    "python.pythonPath": "~/VitalMechanics/dxf2vmg/venv/bin/python",
-    "diagnostic.displayByAle": true
+    "python.pythonPath": "/bin/python",
+    "diagnostic.displayByAle": true,
 }

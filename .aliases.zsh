@@ -1,44 +1,61 @@
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias v='nvim'
-alias sv='sudo -E nvim'
-alias m='neomutt'
-alias sql='sqlite3 -init ~/.config/sqlite3/sqliterc'
-alias sc='sc-im'
-alias copy='xclip -sel c'
-alias diff='diff --color'
-[[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
+alias \
+    ls="ls --color=auto" \
+    grep="grep --color=auto" \
+    v="$EDITOR" \
+    sv="sudo -E $EDITOR" \
+    m="neomutt" \
+    sc="sc-im" \
+    copy="xclip -sel c" \
+    diff="diff --color" \
+    ssh="kitty +kitten ssh"  # kitty ssh patch
 
-alias pacs='sudo pacman -S'
-alias pacss='pacman -Ss'
-alias pacqs='pacman -Qs'
-alias pacsyu='sudo pacman -Syu'
-alias pacrs='sudo pacman -Rs'
-alias pacsc='sudo pacman -Sc'
-alias pacar='sudo pacman -Rsn $(pacman -Qdtq)'
+# pacman abbreviations
+alias \
+    p="pacman" \
+    pacs="sudo pacman -S" \
+    pacss="pacman -Ss" \
+    pacqs="pacman -Qs" \
+    pacsyu="sudo pacman -Syu" \
+    pacrs="sudo pacman -Rs" \
+    pacsc="sudo pacman -Sc"
 
-alias ga='git add'
-alias gaa='git add --all'
-alias gb='git branch'
-alias gc='git commit -vm'
-alias gca='git commit -vam'
-alias gcl='git clone --recurse-submodules'
-alias gl='git pull'
-alias gup='git pull --rebase'
-alias gp='git push'
-alias gf='git fetch'
-alias gco='git checkout'
-alias gst='git status'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gds='git diff --staged'
-alias glg='git log --graph'
-alias gr='git remote'
+pacar() {
+    orphan_packages="$(pacman -Qdtq)"
+    if [ -z "$orphan_packages" ]; then
+        echo "error: no orphan packages found"
+    else
+        sudo pacman -Rsn "$(orphan_packages)"
+    fi
+}
 
-alias t='tmux'
-alias ta='tmux attach-session'
-alias tl='tmux list-sessions'
-alias tk='tmux kill-session'
+# git abbreviations
+alias \
+    g="git" \
+    ga="git add" \
+    gaa="git add --all" \
+    grm="git rm --cached" \
+    gb="git branch" \
+    gc="git commit -vm" \
+    gca="git commit -vam" \
+    gcl="git clone --recurse-submodules" \
+    gl="git pull" \
+    gl="git pull --rebase" \
+    gm="git merge" \
+    gp="git push" \
+    gf="git fetch" \
+    gco="git checkout" \
+    gst="git status" \
+    gd="git diff" \
+    gdc="git diff --cached" \
+    glg="git log --graph" \
+    gr="git remote"
+
+# tmux abbreviations
+alias \
+    t="tmux" \
+    ta="tmux attach-session" \
+    tl="tmux list-sessions" \
+    tk="tmux kill-session"
 
 # Compiles and executes C file and removes binary
 # $1 path to the C file
@@ -46,9 +63,9 @@ crun() {
     gcc "$1" && ./a.out "${@:2}" && rm a.out
 }
 
-# Runs ranger and directs user to current ranger directory on quit
-r() {
-    local target=~/.cache/ranger/rangerdir
-    ranger --choosedir=$target
+# Runs lf and directs user to current lf directory on quit
+lf() {
+    local target=~/.cache/lf/lfdir
+    /usr/bin/lf -last-dir-path $target
     cd "$(cat $target)"
 }

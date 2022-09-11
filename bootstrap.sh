@@ -9,7 +9,7 @@ DOTFILES=(
     ".config/gtk-2.0"
     ".config/gtk-3.0"
     ".config/nvim"
-    ".config/ranger"
+    ".config/lf"
     ".config/betterlockscreenrc"
     ".config/tmux"
     ".config/sqlite3"
