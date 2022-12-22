@@ -39,7 +39,7 @@ alias \
     gca="git commit -vam" \
     gcl="git clone --recurse-submodules" \
     gl="git pull" \
-    gl="git pull --rebase" \
+    gup="git pull --rebase" \
     gm="git merge" \
     gp="git push" \
     gf="git fetch" \

@@ -35,5 +35,5 @@
         }
     },
     "python.pythonPath": "/bin/python",
-    "diagnostic.displayByAle": true,
+    "diagnostic.displayByAle": true
 }

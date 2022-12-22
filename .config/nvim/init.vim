@@ -62,7 +62,7 @@ nnoremap <C-p> <cmd>tabp<cr>
 nnoremap <C-\> <cmd>NERDTreeToggle<cr>
 inoremap <C-\> <ESC>:NERDTreeToggle<cr>
 vnoremap <C-c> "+y
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
+"inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 nnoremap <leader>ft <cmd>TableFormat<cr>
 nnoremap <leader>fj <cmd>%!python -m json.tool<cr>
 

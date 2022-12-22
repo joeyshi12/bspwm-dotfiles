@@ -12,5 +12,5 @@ case $1 in
     *) exit 1;;
 esac
 
-xrandr --output "${PRIMARY_MONITOR}" --brightness "${brightness}"\
-       --output "DVI-I-1" --brightness "${brightness}"
+xrandr --output "${PRIMARY_MONITOR}" --brightness "${brightness}"
+       #--output "DVI-I-1" --brightness "${brightness}"
