@@ -69,6 +69,8 @@ cmd delete ${{
 
 map D delete
 
+cmd touch $touch "$(echo $* | tr ' ' '\ ')"
+
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
 # extract the current file with the right command
