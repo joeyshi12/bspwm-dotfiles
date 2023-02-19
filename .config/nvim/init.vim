@@ -15,6 +15,7 @@ Plug 'SirVer/ultisnips'
     let g:ultisnips_python_quoting_style="double"
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'lervag/vimtex', {'tag': 'v1.6'}
     let g:tex_flavor = 'latex'
